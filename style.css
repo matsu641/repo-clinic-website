@@ -1,0 +1,299 @@
+/* 共通スタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f9f9;
+    
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #007bff;
+    color: white;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li {
+    cursor: pointer;
+}
+
+.other h2{
+    padding-left: 30px; 
+}
+
+.other {
+    padding-left: 50px; /* リスト全体を右に移動 */
+    list-style-type: disc; /* デフォルトの丸い点 */
+}
+
+.other li {
+    margin-bottom: 10px; /* 各アイテム間の余白 */
+}
+
+/* 表全体のスタイル */
+table {
+    width: 60%; /* 表を全幅に広げる */
+    border-collapse: collapse; /* 枠線の二重化を防ぐ */
+    margin: 1rem 0; /* 上下に余白を追加 */
+    text-align: center; /* テキストを中央揃え */
+    background-color: #f9f9f9; /* 背景色を指定 */
+    margin: 0 auto; /* 表を中央揃え */
+}
+
+/* ヘッダー行のスタイル */
+table th {
+    background-color: #007bff; /* ヘッダー背景色 */
+    color: white; /* ヘッダー文字色 */
+    padding: 10px; /* セル内の余白 */
+}
+
+/* データ行のスタイル */
+table td {
+    padding: 10px; /* セル内の余白 */
+    border: 1px solid #ddd; /* セル間の枠線 */
+}
+
+/* 偶数行の背景色を変更 */
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* 偶数行の背景色 */
+}
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content h2{
+    padding-left: 30px;
+    font-size: 30px;
+}
+.tab-content p{
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.tab-content li{
+    font-size: 20px; /* 段落の文字サイズを大きく */
+    line-height: 1.8; /* 行間を広げて読みやすく */
+    
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+/* スライドの設定 */
+.swiper-slide {
+    position: relative; /* キャプションを重ねるために必要 */
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* 画像をスライドに合わせて拡大 */
+    filter: brightness(0.7); /* 少し暗くして文字を目立たせる */
+}
+
+/* キャプションのスタイル */
+.slide-caption {
+    position: absolute;
+    top: 50%; /* 縦方向の中央 */
+    left: 50%; /* 横方向の中央 */
+    transform: translate(-50%, -50%); /* 中央揃え */
+    color: white; /* 白い文字 */
+    text-align: center; /* テキスト中央揃え */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* 文字に影を追加 */
+    z-index: 2; /* 背景画像より前面に表示 */
+}
+
+/* キャッチフレーズのスタイル */
+.slide-caption h2 {
+    font-size: 48px; /* 見出しの文字を大きく */
+    margin: 0;
+}
+
+.slide-caption li {
+    font-size: 24px; /* サブテキストの文字サイズ */
+    margin-top: 10px;
+}
+
+/* 白のぼかしオーバーレイ */
+.swiper-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* 半透明の白 */
+    z-index: 1; /* キャプションの下、画像の上に配置 */
+}
+
+
+.director {
+    display: flex;
+    flex-direction: column; /* 縦に並べる */
+    justify-content: center; /* 垂直方向の中央揃え */
+    align-items: center; /* 水平方向の中央揃え */
+    height: 100vh; /* 画面全体の高さ */
+    text-align: center; /* テキストの中央揃え */
+    
+}
+
+.director img {
+    max-width: 400px; /* 画像の幅を指定 */
+    height: auto; /* アスペクト比を維持 */
+    margin-bottom: 1rem; /* テキストとの間隔 */
+}
+
+.director h2 {
+    font-size: 20px; /* 段落の文字サイズを大きく */
+    line-height: 1.8; /* 行間を広げて読みやすく */
+}
+
+.director p {
+    font-size: 20px; /* 段落の文字サイズを大きく */
+    line-height: 1.8; /* 行間を広げて読みやすく */
+}
+
+
+/* 施設画像のスタイル */
+/* 施設ギャラリー全体のスタイル */
+.facility-gallery {
+    display: flex; /* 横並びにする */
+    justify-content: space-around; /* 各写真の間隔を均等に */
+    align-items: center; /* 縦方向を中央揃え */
+    gap: 1rem; /* 各写真の間隔を指定 */
+    flex-wrap: wrap; /* 必要に応じて折り返す */
+}
+
+.facility-gallery img{
+    width: 30%; /* 各施設カード内で画像を最大幅に */
+    height: auto; /* アスペクト比を維持 */
+}
+
+/* 各施設（写真とテキスト）のスタイル */
+.facility {
+    width: 100%; /* 各施設カード内で画像を最大幅に */
+    height: auto; /* アスペクト比を維持 */
+}
+
+.facility1 img {
+    width: 100%; /* 各施設カード内で画像を最大幅に */
+    height: auto; /* アスペクト比を維持 */
+    border-radius: 8px; /* 画像の角を丸くする（オプション） */
+}
+
+
+/* Googleマップのスタイル */
+#map {
+    margin-top: 1rem;
+    width: 100%;
+    height: 300px;
+}
+
+/* チャットボットアイコンのスタイル */
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+#chatbot-icon:hover {
+    background-color: #0056b3; /* ホバー時の色変化 */
+}
+
+/* チャットウィンドウの基本レイアウト */
+#chat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    height: 400px;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    font-family: Arial, sans-serif;
+}
+
+/* ヘッダー部分のスタイル */
+#chat-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* チャットの表示領域 */
+#chat-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+/* チャットのメッセージのスタイル */
+#chat-body p {
+    margin: 5px 0;
+}
+
+#chat-body p strong {
+    color: #007bff;
+}
+
+/* ユーザーからの入力と送信ボタン */
+#chat-footer {
+    display: flex;
+}
+
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-bottom-left-radius: 10px;
+    outline: none;
+}
+
+#sendButton {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#sendButton:hover {
+    background-color: #0056b3;
+}

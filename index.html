@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>くわばら整形外科</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper.js（スライドショー用） -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo">
+            <h1>くわばら整形外科</h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="tab active" data-tab="home">ホーム</li>
+                <li class="tab" data-tab="about">診療案内</li>
+                <li class="tab" data-tab="rihab">リハビリ</li>
+                <li class="tab" data-tab="access">アクセス</li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- コンテンツエリア -->
+    <main>
+        <!-- ホーム（スライドショー） -->
+        <section id="home" class="tab-content active">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/clinic.jpg" alt="スライド1">
+                        <div class="slide-caption">
+                            <h2>安心の医療で皆様を支えます</h2>
+                            <p>地域に根差したクリニック</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/clinic2.jpg" alt="スライド2">
+                        <div class="slide-caption">
+                            <h2>体の再生と機能回復をサポート</h2>
+                            <p>快適な診療環境を提供します</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/clinic3.jpg" alt="スライド3">
+                        <div class="slide-caption">
+                            <h2>患者さんに寄り添った回復プログラム</h2>
+                            <p>いつでもお気軽にご相談ください</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        <div class="other">
+            <h2>診療科目</h2>
+        <ul>
+            <li>リウマチ科</li>
+            <li>整形外科</li>
+            <li>リハビリテーション科</li>
+        </ul>
+        <br>
+        <h2>診療時間</h2>
+        <table>
+            <tr>
+                <th>曜日</th>
+                <th>午前</th>
+                <th>午後</th>
+            </tr>
+            <tr>
+                <td>月〜金</td>
+                <td>8:00 - 12:00</td>
+                <td>14:50 - 19:00</td>
+            </tr>
+            <tr>
+                <td>土</td>
+                <td>8:00 - 12:00</td>
+                <td>14:00 - 17:00</td>
+            </tr>
+            <tr>
+                <td>休診日</td>
+                <td colspan="2">木曜日、祝祭日</td>
+            </tr>
+        </table>
+        <p>当院では、予約された患者様を優先的に診察しておりますが、予約をされていない場合でも対応させていただきます。</p>
+        <p>どうぞお気軽にご来院ください。</p>
+        <br>
+
+        <h2>お願い</h2>
+        <ul>
+            <li>アイドリング駐車は近隣の迷惑になるのでおやめください</li>
+            <li>駐車場前の道路での停車は、渋滞の原因となるためご遠慮いただき、速やかに駐車場内へお入りください。</li>
+            <li>院内での携帯電話の利用はご遠慮ください</li>
+        </ul>
+        <br>
+
+        <h2>お知らせ</h2>
+        <ul>
+            <li>お知らせは今現在ありません。</li>
+            <br>
+        </ul>
+        <br>
+    </div>
+        </section>
+
+        <!-- 診療案内（院長紹介と院内紹介） -->
+        <section id="about" class="tab-content">
+            <h2>院長紹介</h2>
+            <div class="director">
+                <img src="images/tipapa.jpg" alt="院長写真">
+                <li>〇〇年　金沢大学医学部医学科卒業</li>
+                <li>〇〇年　整形外科専門医資格取得</li>
+            </div>
+            
+
+            <h2>院内の紹介</h2>
+            <div class="facility-gallery">
+                <div class="facility1">
+                    <img src="images/reception.jpg" alt="受付">
+                    <p> 受付 </p>
+                </div>
+                    
+                <div class="facility2">
+                    <img src="images/waitingroom.jpg" alt="待合室">
+                    <p> 待合室 </p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- リハビリ -->
+        <section id="rihab" class="tab-content">
+            <div class="facility">
+                <img src="images/rehab.jpg" alt="リハビリ室">
+                <p>リハビリ室</p>
+            </div>
+            
+            <p>当院は理学療法士学生の実習期間でもあります。</p>
+            
+        </section>
+
+        <!-- アクセス -->
+        <section id="access" class="tab-content">
+            <h2>アクセス</h2>
+            
+            <p>群馬総社駅から車で10分</p>
+            <p>八木原駅から車で7分</p>
+
+            <p>住所: 〒370-3601 群馬県北群馬郡吉岡町漆原1179 </p>
+
+            <div id="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.859359758356!2d138.97592381532206!3d36.456148180012215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601df1587a9b85a1%3A0x25d4d6b4c2df8b1!2z5b6z5Y-j5bGL6Kit5bSO5bGx5Y-j!5e0!3m2!1sja!2sjp!4v1682345678901!5m2!1sja!2sjp" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <h2>お問い合わせ</h2>
+            <p>電話番号: 0279-25-8855</p>
+            <br>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 くわばら整形外科 All Rights Reserved.</p>
+    </footer>
+
+<!-- チャットボットアイコン -->
+<div id="chatbot-icon">💭
+</div>
+
+<!-- チャットウィンドウ -->
+<!-- チャットウィンドウ -->
+<div id="chat-window">
+    <div id="chat-header">AIチャットボット</div>
+    <div id="chat-body">
+        <p><strong>AI:</strong> 以下の中から関連する質問を選択してください:</p>
+        <ul id="category-list">
+            <li class="category-option">診療時間・休診日に関する質問</li>
+            <li class="category-option">予約・受付に関する質問</li>
+            <li class="category-option">診療科・医療サービスに関する質問</li>
+            <li class="category-option">診療内容に関する具体的な質問</li>
+            <li class="category-option">施設に関する質問</li>
+            <li class="category-option">お問い合わせに関する質問</li>
+            <li class="category-option">保険に関する質問</li>
+        </ul>
+    </div>
+    <div id="chat-footer">
+        <input type="text" id="userInput" placeholder="具体的な質問を入力してください" disabled>
+        <button id="sendButton" disabled>送信</button>
+    </div>
+</div>
+
+
+<script>
+    const apiKey = "YOUR_OPENAI_API_KEY";  // OpenAIのAPIキーを設定
+    const chatbotIcon = document.getElementById("chatbot-icon");
+    const chatWindow = document.getElementById("chat-window");
+    const chatBody = document.getElementById("chat-body");
+    const userInput = document.getElementById("userInput");
+    const sendButton = document.getElementById("sendButton");
+
+    // アイコンをクリックするとチャットウィンドウを表示/非表示にする
+    chatbotIcon.addEventListener("click", () => {
+        chatWindow.style.display = chatWindow.style.display === "none" ? "flex" : "none";
+    });
+
+    // メッセージを送信する
+    sendButton.addEventListener("click", async () => {
+        const message = userInput.value;
+        if (!message) return;
+
+        // ユーザーのメッセージをチャット画面に表示
+        chatBody.innerHTML += `<p><strong>あなた:</strong> ${message}</p>`;
+        userInput.value = "";  // 入力欄をクリア
+
+        // OpenAI APIにメッセージを送信して応答を取得
+        const response = await fetch("https://api.openai.com/v1/completions", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: "text-davinci-003",
+                prompt: message,
+                max_tokens: 100
+            })
+        });
+
+        const data = await response.json();
+        const reply = data.choices[0].text.trim();
+        chatBody.innerHTML += `<p><strong>AI:</strong> ${reply}</p>`;
+
+        // チャット画面を自動でスクロール
+        chatBody.scrollTop = chatBody.scrollHeight;
+    });
+</script>
+
+<!-- Swiper.js -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
