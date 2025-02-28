@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+/*document.addEventListener("DOMContentLoaded", () => {
     const tabs = document.querySelectorAll(".tab");
     const contents = document.querySelectorAll(".tab-content");
 
@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById(tab.dataset.tab).classList.add("active");
         });
     });
+
 
      // Swiper.jsの初期化
     const swiper = new Swiper('.swiper-container', {
@@ -30,7 +31,47 @@ document.addEventListener("DOMContentLoaded", () => {
             prevEl: '.swiper-button-prev', // 前のスライドボタン
         },
     });
+});*/
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            // アクティブなタブを切り替え
+            tabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            // 表示するセクションを切り替え
+            contents.forEach(content => content.classList.remove("active"));
+            const targetContent = document.getElementById(tab.dataset.tab);
+            if (targetContent) {
+                targetContent.classList.add("active");
+            } else {
+                console.error(`Tab content with id "${tab.dataset.tab}" not found.`);
+            }
+        });
+    });
+
+    // Swiper.jsの初期化
+    const swiper = new Swiper('.swiper-container', {
+        loop: true, // スライドをループ
+        autoplay: {
+            delay: 5000, // 5秒ごとにスライド切り替え
+            disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+        },
+        pagination: {
+            el: '.swiper-pagination', // ページネーションを有効
+            clickable: true, // ページネーションのクリックを有効
+        },
+        navigation: {
+            nextEl: '.swiper-button-next', // 次のスライドボタン
+            prevEl: '.swiper-button-prev', // 前のスライドボタン
+        },
+    });
 });
+
 
 const categoryList = document.getElementById("category-list");
 const userInput = document.getElementById("userInput");
