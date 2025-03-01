@@ -101,7 +101,7 @@ table tr:nth-child(even) {
 
 .swiper-slide img {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     object-fit: cover; /* 画像をスライドに合わせて拡大 */
     filter: brightness(0.7); /* 少し暗くして文字を目立たせる */
 }
@@ -298,7 +298,7 @@ table tr:nth-child(even) {
     background-color: #0056b3;
 }
 
-.rehab-box {
+.about-box {
     border: 2px solid #007bff;
     padding: 15px;
     margin: 15px auto;
@@ -317,5 +317,87 @@ footer {
     text-align: center;
 }
 
+.rehab-card {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 300px;
+    /*text-align: center;*/
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rehab-card h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.rehab-card p {
+    font-size: 16px;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+.rehab-card ul {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 14px;
+}
 
 
+.rehab-card li {
+    list-style-type: disc;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.rehab-card strong {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.note {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+}
+
+
+.access-container h3 {
+    color: #007bff;
+    font-size: 20px;
+    margin-top: 15px;
+    padding-left: 50px;
+}
+
+.access-container ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 50px;
+}
+
+.access-container li {
+    font-size: 20px;
+    line-height: 1.5;
+    padding-left: 70px; 
+}
+
+#map iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+.tel {
+    font-size: 20px;  
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0px;    
+}
