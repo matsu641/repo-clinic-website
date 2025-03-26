@@ -372,5 +372,18 @@ footer {
     .slide-caption p {
       font-size: 16px;
     }
+
+    .other {
+        padding-left: 20px;
+    }
+    
+    .other h2 {
+        padding-left: 10px;
+    }
+    
+    .other ul,
+    .other p {
+        margin-left: 10px;
+    }
   }
   
