@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>くわばら整形外科</title>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalClinic",
+          "name": "くわばら整形外科",
+          "image": "https://サイトURL/images/clinic.jpg",
+          "url": "https://サイトURL/",
+          "telephone": "0279-25-8855",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "漆原1179",
+            "addressLocality": "北群馬郡吉岡町",
+            "addressRegion": "群馬県",
+            "postalCode": "370-3601",
+            "addressCountry": "JP"
+          },
+          "openingHours": [
+            "Mo-Fr 08:00-12:00",
+            "Mo-Fr 14:50-19:00",
+            "Sa 08:00-12:00",
+            "Sa 14:00-17:00"
+          ],
+          "medicalSpecialty": "Orthopedic",
+          "description": "群馬県吉岡町にある整形外科・リウマチ科・リハビリテーション科のくわばら整形外科です。"
+        }
+        </script>
+        
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="群馬県吉岡町のくわばら整形外科では、整形外科・リウマチ科・リハビリテーション科を中心に、地域に根ざした安心・丁寧な医療を提供します。">
+        <title>くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ</title>
+      
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
@@ -14,9 +43,12 @@
     <!-- ヘッダー -->
     <header>
         <div class="logo">
-            <h1>くわばら整形外科</h1>
-            <p class="tel">TEL: 0279-25-8855</p>
-        </div>
+            <img src="C:\Users\misum\OneDrive\デスクトップ\kuwabara-clinic\images\logo.jpg" alt="ロゴ" class="logo-img">
+            <div>
+                <h1>くわばら整形外科</h1>
+                <p class="tel">TEL: 0279-25-8855</p>
+            </div>
+        </div>        
         <nav>
             <ul>
                 <li class="tab active" data-tab="home">ホーム</li>
@@ -99,9 +131,9 @@
                 <br>
                 <h2>お願い</h2>
                 <ul>
-                    <li>アイドリング駐車は近隣の迷惑になるのでおやめください</li>
+                    <li>アイドリング駐車は近隣の迷惑になるのでおやめください。</li>
                     <li>駐車場前の道路での停車は、渋滞の原因となるためご遠慮いただき、速やかに駐車場内へお入りください。</li>
-                    <li>院内での携帯電話の利用はご遠慮ください</li>
+                    <li>院内での携帯電話の利用はご遠慮ください。</li>
                 </ul>
                 <br>
                 <h2>お知らせ</h2>
@@ -117,9 +149,9 @@
         <section id="about" class="tab-content">
             <h2>院長紹介</h2>
             <div class="director">
-                <img src="images/tipapa.jpg" alt="院長写真">
-                <li>〇〇年　金沢大学医学部医学科卒業</li>
-                <li>〇〇年　整形外科専門医資格取得</li>
+                <img src="images/doctor.jpg" alt="院長写真">
+                <li>金沢大学 医学部医学科 卒業</li>
+                <li>整形外科専門医資格 取得</li>
             </div>
 
             <h2>院内の紹介</h2>
@@ -151,14 +183,13 @@
                         <p>圧力波を使って</p>
                         <p>痛みのある部分の回復を早めます。</p>
                         <p>手術なしで傷跡が残りません。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>足底筋膜炎（かかとの痛み）</li>
-                            <li>テニス肘・ゴルフ肘</li>
-                            <li>石灰沈着性腱板炎（肩の痛み）</li>
-                            <li>アキレス腱炎、ジャンパー膝</li>
-                            <li>慢性的な筋・腱の痛み</li>
-                        </ul>
+                        <p>足底筋膜炎（かかとの痛み）<br>
+                            テニス肘・ゴルフ肘<br>
+                            石灰沈着性腱板炎（肩の痛み）<br>
+                            アキレス腱炎、ジャンパー膝<br>
+                            慢性的な筋・腱の痛み</p>
                     </div>
         
                     <!-- 干渉波治療 -->
@@ -167,30 +198,27 @@
                         <p>低周波の電気刺激で</p>
                         <p>筋肉や神経をほぐし、</p>
                         <p>血流を促進します。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>肩こり・腰痛</li>
-                            <li>坐骨神経痛</li>
-                            <li>首や肩のしびれ</li>
-                            <li>関節リウマチの痛み</li>
-                            <li>慢性的な神経痛</li>
-                        </ul>
+                        <p>肩こり・腰痛<br>
+                            坐骨神経痛<br>
+                            首や肩のしびれ<br>
+                            関節リウマチの痛み<br>
+                            慢性的な神経痛</p>
                     </div>
-        
+
                     <!-- 超音波治療 -->
                     <div class="rehab-card">
                         <h3>超音波治療</h3>
                         <p>超音波の振動を使って</p>
                         <p>筋肉や靭帯を温め、</p>
                         <p>血流を改善する治療法です。</p>
-
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>ぎっくり腰</li>
-                            <li>捻挫・肉離れ</li>
-                            <li>肩・膝の痛み</li>
-                            <li>スポーツによる筋肉・腱の損傷</li>
-                        </ul>
+                        <p>ぎっくり腰<br>
+                            捻挫・肉離れ<br>
+                            肩・膝の痛み<br>
+                            スポーツによる筋肉・腱の損傷</p>
                     </div>
         
                     <!-- 牽引治療 -->
@@ -199,13 +227,13 @@
                         <p>首や腰をゆっくり引っ張ることで、</p>
                         <p>神経の圧迫を軽減し、</p>
                         <p>痛みやしびれを和らげます。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>頚椎症（首のこり・痛み）</li>
-                            <li>腰の痛み、足の痺れ</li>
-                            <li>坐骨神経痛</li>
-                            <li>慢性的な腰痛</li>
-                        </ul>
+                        <p>頚椎症（首のこり・痛み）<br>
+                            腰の痛み<br>
+                            足の痺れ<br>
+                            坐骨神経痛<br>
+                            慢性的な腰痛</p>
                     </div>
         
                     <!-- マイクロ波治療 -->
@@ -214,13 +242,11 @@
                         <p>電磁波で体の深部を温め、</p>
                         <p>血流を改善し、</p>
                         <p>筋肉の緊張を和らげます。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>慢性的な腰痛・肩こり</li>
-                            <li>関節痛（膝・肘など）</li>
-                            <li>筋肉の疲労</li>
-                            <li>神経痛</li>
-                        </ul>
+                            <p>慢性的な腰痛・肩こり<br>
+                            関節痛（膝・肘など）<br>
+                            筋肉の疲労、神経痛</p>
                     </div>
         
                     <!-- ウォーターベッド -->
@@ -228,13 +254,12 @@
                         <h3>ウォーターベッド</h3>
                         <p>水の力で全身をマッサージし、</p>
                         <p>血行を良くする機器です。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>全身の疲労・倦怠感</li>
-                            <li>肩こり・腰痛</li>
-                            <li>ストレス・不眠</li>
-                            <li>足のむくみ</li>
-                        </ul>
+                        <p>全身の疲労・倦怠感<br>
+                            肩こり・腰痛<br>
+                            ストレス・不眠<br>
+                            足のむくみ</p>
                     </div>
         
                     <!-- 骨折治療器 -->
@@ -242,12 +267,11 @@
                         <h3>骨折治療器（超音波骨折治療）</h3>
                         <p>超音波で骨の回復を促進し、</p>
                         <p>骨のくっつきを早める治療法です。</p>
+                        <br>
                         <strong>適応症状:</strong>
-                        <ul>
-                            <li>骨折</li>
-                            <li>骨癒合が遅れている</li>
-                            <li>スポーツの早期復帰を目指す治療</li>
-                        </ul>
+                        <p>骨折<br>
+                            骨癒合が遅れている<br>
+                            スポーツの早期復帰を目指す治療</p>
                     </div>
         
                 </div>
@@ -292,135 +316,9 @@
     <footer>
         <p>© 2025 くわばら整形外科 All Rights Reserved.</p>
     </footer>
-
-<<<<<<< HEAD
-=======
     
-    <!-- チャットボットアイコン -->
-    <!-- <div id="chatbot-icon">💭</div>-->
-
-    <!-- チャットウィンドウ -->
-    <div id="chat-window">
-        <div id="chat-header">AIチャットボット</div>
-        <div id="chat-body">
-            <p><strong>AI:</strong> 以下の中から関連する質問を選択してください:</p>
-            <ul id="category-list">
-                <li class="category-option">診療時間・休診日に関する質問</li>
-                <li class="category-option">予約・受付に関する質問</li>
-                <li class="category-option">診療科・医療サービスに関する質問</li>
-                <li class="category-option">診療内容に関する具体的な質問</li>
-                <li class="category-option">施設に関する質問</li>
-                <li class="category-option">お問い合わせに関する質問</li>
-                <li class="category-option">保険に関する質問</li>
-            </ul>
-        </div>
-        <div id="chat-footer">
-            <input type="text" id="userInput" placeholder="具体的な質問を入力してください" disabled>
-            <button id="sendButton" disabled>送信</button>
-        </div>
-    </div>
->>>>>>> d2e3384afba7be256bcf15c5d0d1e8bf2e6506b2
-
-    
-    <!-- Swiper.js -->
+<!-- Swiper.js -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<<<<<<< HEAD
     <script src="script.js"></script>
-=======
-
-    <!-- メインスクリプト（タブ切り替え＋チャットボット） -->
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // タブ切り替え処理 
-        const tabs = document.querySelectorAll(".tab");
-        const contents = document.querySelectorAll(".tab-content");
-
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => {
-                // すべてのタブから active クラスを外す
-                tabs.forEach(t => t.classList.remove("active"));
-                // クリックしたタブに active クラスを付与
-                tab.classList.add("active");
-
-                // すべてのコンテンツから active クラスを外す
-                contents.forEach(content => content.classList.remove("active"));
-                // タブの data-tab 属性に対応する要素を表示
-                document.getElementById(tab.dataset.tab).classList.add("active");
-            });
-        });
-
-        // Swiper.jsの初期化 
-        const swiper = new Swiper('.swiper-container', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-    
-        });
-        
-        const chatbotIcon = document.getElementById("chatbot-icon");
-        const chatWindow = document.getElementById("chat-window");
-        const chatBody = document.getElementById("chat-body");
-        const userInput = document.getElementById("userInput");
-        const sendButton = document.getElementById("sendButton");
-        const categoryList = document.getElementById("category-list");
-
-        let selectedCategory = "";
-
-        // アイコンをクリックするとチャットウィンドウを表示/非表示にする
-        chatbotIcon.addEventListener("click", () => {
-            chatWindow.style.display = (chatWindow.style.display === "none" || chatWindow.style.display === "") 
-                                       ? "flex" 
-                                       : "none";
-        });
-
-        // カテゴリーがクリックされたときの動作
-        categoryList.addEventListener("click", (event) => {
-            if (event.target.classList.contains("category-option")) {
-                selectedCategory = event.target.innerText;
-                // カテゴリー選択のメッセージを表示
-                chatBody.innerHTML += `<p><strong>AI:</strong> 「${selectedCategory}」に関する質問ですね。具体的な質問を入力してください。</p>`;
-                // 入力フォームと送信ボタンを有効化
-                userInput.disabled = false;
-                sendButton.disabled = false;
-            }
-        });
-
-        // 送信ボタンがクリックされたときの動作
-        sendButton.addEventListener("click", async () => {
-            const userQuestion = userInput.value.trim();
-            if (!userQuestion) return;
-
-            // 質問をチャット画面に表示
-            chatBody.innerHTML += `<p><strong>あなた:</strong> ${userQuestion}</p>`;
-            userInput.value = "";
-
-            // FAQ用のJSONファイルを読み込む
-            const response = await fetch("faq.json");
-            const faqData = await response.json();
-
-            // 質問と類似するものを検索
-            let answer = "すみません、その質問にはまだ対応していません。";  // 初期メッセージ
-            faqData.forEach(faq => {
-                // カテゴリーと質問文が合致しているかどうかでチェック
-                if (faq.category === selectedCategory && userQuestion.includes(faq.question)) {
-                    answer = faq.answer;
-                }
-            });
-
-            // 回答をチャット画面に表示
-            chatBody.innerHTML += `<p><strong>AI:</strong> ${answer}</p>`;
-
-            // チャット画面を自動でスクロール
-            chatBody.scrollTop = chatBody.scrollHeight;
-        });
-    });
-    </script>
->>>>>>> d2e3384afba7be256bcf15c5d0d1e8bf2e6506b2
 </body>
 </html>

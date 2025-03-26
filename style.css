@@ -25,6 +25,17 @@ header nav ul li {
     cursor: pointer;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 50px; 
+    height: auto;
+}
+
 /* 診療科目・診療時間などのテキスト */
 .other {
     padding-left: 50px;
@@ -208,12 +219,8 @@ table tr:nth-child(even) {
 
 .rehab-card ul {
     list-style-type: disc;
-    padding-left: 30px;
+    /*padding-left: 30px;*/
     font-size: 14px;
-}
-
-.rehab-card li {
-    font-size: 16px;
 }
 
 /* アクセス情報 */
