@@ -32,10 +32,13 @@ header nav ul li {
 }
 
 .logo-img {
-    width: 50px; 
-    height: auto;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #007bff;  /* 青い枠 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影 */
 }
-
 /* 診療科目・診療時間などのテキスト */
 .other {
     padding-left: 50px;
