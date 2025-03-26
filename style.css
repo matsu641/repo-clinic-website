@@ -30,6 +30,17 @@ header nav ul li {
     align-items: center;
     gap: 15px;
 }
+  
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+.logo-text h1 {
+    margin: 0;
+    font-size: 28px;
+}
 
 .logo-img {
     height: 80px;
@@ -39,6 +50,13 @@ header nav ul li {
     border: 2px solid #007bff;  /* 青い枠 */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影 */
 }
+
+.tel {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
 /* 診療科目・診療時間などのテキスト */
 .other {
     padding-left: 50px;
