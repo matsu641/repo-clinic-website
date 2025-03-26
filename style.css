@@ -278,6 +278,32 @@ footer {
 
 /*phone*/
 @media screen and (max-width: 768px) {
+    body {
+        font-size: 14px !important;
+    }
+
+    p, li {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    h3 {
+        font-size: 18px !important;
+    }
+
+    table td, table th {
+        font-size: 13px !important;
+    }
+
+    .rehab-card p,
+    .rehab-card li {
+        font-size: 14px !important;
+    }
+    
     header {
       flex-direction: column;
       align-items: flex-start;
@@ -290,7 +316,7 @@ footer {
         width: 100%;
     }
     
-      .logo-text {
+    .logo-text {
         align-items: flex-start;
     }
 
@@ -345,22 +371,5 @@ footer {
     .slide-caption p {
       font-size: 16px;
     }
-
-    body {
-        font-size: 14px;
-      }
-  
-      p, li {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-  
-      h2 {
-        font-size: 20px;
-      }
-  
-      h3 {
-        font-size: 18px;
-      }
   }
   
