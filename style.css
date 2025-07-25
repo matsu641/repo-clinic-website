@@ -5,31 +5,60 @@ body {
     padding: 0;
     color: #333;
     background-color: #f9f9f9;
+    width: 100%;
+    max-width: 100vw;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #66cdaa;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
     color: white;
+    box-shadow: 0 4px 20px rgba(102, 205, 170, 0.3);
+    position: relative;
+    z-index: 100;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 header nav ul li {
     cursor: pointer;
+    padding: 0.8rem 1.2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+header nav ul li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+header nav ul li.active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
 }
   
 .logo-text {
@@ -40,7 +69,9 @@ header nav ul li {
   
 .logo-text h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo-img {
@@ -48,12 +79,17 @@ header nav ul li {
     width: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid #007bff;  /* 青い枠 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 影 */
+    border: 3px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .tel {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 4px;
 }
@@ -78,26 +114,45 @@ header nav ul li {
 
 /* テーブル（診療時間） */
 table {
-    width: 60%;
+    width: 80%;
+    max-width: 600px;
     border-collapse: collapse;
-    margin: 1rem auto;
+    margin: 2rem auto;
+    margin-left: 80px;
+    margin-right: 50px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(102, 205, 170, 0.2);
 }
 
 table th {
-    background-color: #66cdaa;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
     color: white;
-    padding: 10px;
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 table td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+table tr:hover {
+    background-color: rgba(102, 205, 170, 0.05);
 }
 
 table tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #fafafa;
+}
+
+table tr:last-child td {
+    border-bottom: none;
 }
 
 /* タブ切り替え */
@@ -111,17 +166,53 @@ table tr:nth-child(even) {
 
 .tab-content h2 {
     padding-left: 30px;
-    font-size: 30px;
+    font-size: 24px;
+    color: #2c3e50;
+    position: relative;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.tab-content h2:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: calc(100% + 20px);
+    height: 4px;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+    border-radius: 2px;
+    transform: translateX(-50%);
 }
 
 .tab-content p,
 .tab-content li {
     padding-left: 30px;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.8;
 }
 
 /* スライドの設定 */
+.swiper-container {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
 .swiper-slide img {
     width: 100%;
     height: 80vh;
@@ -142,13 +233,15 @@ table tr:nth-child(even) {
 }
 
 .slide-caption h2 {
-    font-size: 48px;
+    font-size: 36px;
     margin: 0;
+    color: white;
 }
 
-.slide-caption li {
-    font-size: 24px;
+.slide-caption p {
+    font-size: 18px;
     margin-top: 10px;
+    color: white;
 }
 
 .swiper-slide::before {
@@ -173,9 +266,85 @@ table tr:nth-child(even) {
 }
 
 .director img {
-    max-width: 400px;
+    max-width: 250px;
     height: auto;
     margin-bottom: 1rem;
+}
+
+/* 院長から一言セクション */
+.director-message {
+    background: linear-gradient(145deg, #ffffff 0%, #f8fffe 100%);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 40px 50px;
+    box-shadow: 0 15px 40px rgba(102, 205, 170, 0.15);
+    border-left: 5px solid #66cdaa;
+    position: relative;
+    overflow: hidden;
+}
+
+.director-message:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(102, 205, 170, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(30%, -30%);
+}
+
+.message-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.message-header h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    text-align: center;
+}
+
+.message-icon {
+    font-size: 24px;
+    color: #66cdaa;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.message-content {
+    text-align: left;
+    line-height: 1.8;
+}
+
+.message-content p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.message-signature {
+    text-align: right;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 2px solid rgba(102, 205, 170, 0.2);
+}
+
+.message-signature span {
+    color: #66cdaa;
+    font-weight: 600;
+    font-style: italic;
 }
 
 /* 施設紹介 */
@@ -189,12 +358,26 @@ table tr:nth-child(even) {
 .facility1, .facility2 {
     width: 45%;
     text-align: center;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(102, 205, 170, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.facility1:hover, .facility2:hover {
+    transform: translateY(-5px);
 }
 
 .facility1 img, .facility2 img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.facility1 img:hover, .facility2 img:hover {
+    transform: scale(1.02);
 }
 
 /* Googleマップ */
@@ -219,32 +402,94 @@ table tr:nth-child(even) {
 }
 
 .rehab-card {
-    background-color: #eff4f3;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8fffe 100%);
+    border: 1px solid rgba(102, 205, 170, 0.2);
+    border-radius: 20px;
+    padding: 25px;
     width: 300px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(102, 205, 170, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.rehab-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+}
+
+.rehab-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(102, 205, 170, 0.25);
 }
 
 .rehab-card h3 {
-    color: #007bff;
-    font-size: 20px;
-    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .rehab-card p {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 5px;
     padding-left: 5px;
-  }
+}
+
+.rehab-card .symptom-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    padding-left: 5px;
+}
+
+.rehab-card .symptom-list {
+    margin: 10px 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.rehab-card .symptom-list li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
   
 /* アクセス情報 */
+.access-container {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 20px 50px;
+    box-shadow: 0 10px 40px rgba(102, 205, 170, 0.15);
+}
+
 .access-container h3 {
-    color: #007bff;
-    font-size: 20px;
-    margin-top: 15px;
-    padding-left: 50px;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    padding-left: 0;
+    position: relative;
+    display: inline-block;
+}
+
+.access-container h3:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: calc(100% + 16px);
+    height: 3px;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+    border-radius: 2px;
+    transform: translateX(-50%);
 }
 
 .access-container ul {
@@ -254,7 +499,7 @@ table tr:nth-child(even) {
 }
 
 .access-container li {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.5;
     padding-left: 70px;
 }
@@ -266,7 +511,7 @@ footer {
 }
 
 .tel {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
 }
@@ -275,28 +520,85 @@ footer {
 @media screen and (max-width: 768px) {
     body {
         font-size: 14px !important;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .swiper-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .swiper-slide {
+        width: 100%;
+        overflow: hidden;
     }
 
     p, li {
         font-size: 14px !important;
         line-height: 1.6 !important;
+        text-align: left;
+    }
+
+    .tab-content h2 {
+        text-align: center !important;
+        padding-left: 0 !important;
+        display: inline-block;
+        width: auto;
+        margin: 0 auto 2rem auto;
+    }
+    
+    /* 診療案内とアクセスタブのタイトルに左padding */
+    #about h2,
+    #access h2 {
+        text-align: left !important;
+        padding-left: 20px !important;
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0 0 2rem 20px !important;
+    }
+    
+    /* 診療案内とアクセスタブのタイトルのアンダーラインを調整 */
+    #about h2:after,
+    #access h2:after {
+        width: calc(100% + 20px) !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .tab-content h2:after {
+        width: calc(100% + 20px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tab-content p,
+    .tab-content li {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
     h2 {
-        font-size: 20px !important;
-    }
-
-    h3 {
         font-size: 18px !important;
     }
 
+    h3 {
+        font-size: 16px !important;
+        font-weight: normal !important;
+    }
+
     table td, table th {
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
 
     .rehab-card p,
     .rehab-card li {
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
     
     header {
@@ -311,11 +613,11 @@ footer {
       }
     
       .logo-text h1 {
-        font-size: 20px;
+        font-size: 18px !important;
       }
     
       .tel {
-        font-size: 14px;
+        font-size: 13px !important;
       }
 
     header nav ul {
@@ -326,29 +628,26 @@ footer {
     }
     
     .logo-img {
-        height: 50px;
-        width: 50px;
-    }
-    
-    .logo-text h1 {
-        font-size: 22px;
+        height: 60px;
+        width: 60px;
     }
   
     /*リハビリタイトルとテキストサイズ調整 */
     #rihab h2 {
-        font-size: 20px;
+        font-size: 18px !important;
         text-align: center;
         margin-bottom: 10px;
     }
   
     .rehab-card h3 {
-        font-size: 18px;
+        font-size: 16px !important;
+        font-weight: bold !important;
     }
   
     .rehab-card p,
     .symptom-title,
     .symptom-list li {
-        font-size: 14px;
+        font-size: 13px !important;
     }
   
     .rehab-container {
@@ -359,6 +658,32 @@ footer {
     .rehab-card {
       width: 90%;
     }
+    
+    /* スマホでリハビリカード内を中央寄せ */
+    .rehab-card p,
+    .rehab-card .symptom-title {
+        text-align: center !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .rehab-card .symptom-list {
+        text-align: left !important;
+        padding-left: 70px !important;
+        padding-right: 10px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        list-style-type: disc !important;
+    }
+    
+    .rehab-card .symptom-list li {
+        text-align: left !important;
+        margin-bottom: 8px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
   
     .facility-gallery {
       flex-direction: column;
@@ -368,31 +693,117 @@ footer {
     .facility1, .facility2 {
       width: 90%;
     }
+
+    .director img {
+        max-width: 200px !important;
+    }
+    
+    /* 院長から一言セクション（スマホ版） */
+    .director-message {
+        margin: 30px 20px !important;
+        padding: 20px !important;
+    }
+    
+    .message-header h3 {
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+    
+    .message-content p {
+        font-size: 14px !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .message-signature {
+        text-align: center !important;
+    }
   
     table {
-      width: 100%;
-      font-size: 14px;
+      width: 90%;
+      max-width: 100%;
+      margin: 1rem auto;
+      font-size: 12px !important;
     }
   
     .slide-caption h2 {
-      font-size: 28px;
+      font-size: 24px !important;
+      color: white !important;
     }
   
     .slide-caption p {
-      font-size: 16px;
+      font-size: 14px !important;
+      white-space: nowrap !important;
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      max-width: 90% !important;
+      margin: 0 auto !important;
+      color: white !important;
     }
 
     .other {
         padding-left: 20px;
+        padding-right: 20px;
     }
     
     .other h2 {
-        padding-left: 10px;
+        padding-left: 0;
+        text-align: center;
     }
     
     .other ul,
     .other p {
-        margin-left: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .access-container {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .access-container h3 {
+        text-align: center !important;
+        display: block;
+        margin: 20px auto 15px auto;
+        width: fit-content;
+    }
+
+    .access-container h3:after {
+        width: calc(100% + 16px);
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    /* アクセスコンテナ内のテキストを中央寄せ */
+    .access-container ul {
+        text-align: center !important;
+        padding-left: 0 !important;
+        list-style: none !important;
+    }
+    
+    .access-container li {
+        text-align: center !important;
+        padding-left: 0 !important;
+        margin-bottom: 10px !important;
+    }
+
+    footer {
+        text-align: center !important;
+        padding: 10px;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    footer p {
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 20px !important;
     }
   }
   
