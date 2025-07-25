@@ -173,4 +173,5 @@ document.addEventListener("DOMContentLoaded", () => {
             loader.remove();
         }, 500);
     }, 2000);
-});
+}
+);
