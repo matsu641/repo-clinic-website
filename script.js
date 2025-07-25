@@ -37,14 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             nextEl: '.swiper-button-next', // 次のスライドボタン
             prevEl: '.swiper-button-prev', // 前のスライドボタン
         },
-        effect: 'coverflow',
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        },
     });
 
     // スクロール時のパララックス効果
@@ -99,38 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-
-    // マウス追従効果
-    let mouseX = 0, mouseY = 0;
-    let cursorX = 0, cursorY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    // カスタムカーソル（オプション）
-    const cursor = document.createElement('div');
-    cursor.style.cssText = `
-        position: fixed;
-        width: 20px;
-        height: 20px;
-        background: radial-gradient(circle, rgba(102, 205, 170, 0.6) 0%, transparent 70%);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease;
-    `;
-    document.body.appendChild(cursor);
-
-    function updateCursor() {
-        cursorX += (mouseX - cursorX) * 0.1;
-        cursorY += (mouseY - cursorY) * 0.1;
-        cursor.style.left = cursorX - 10 + 'px';
-        cursor.style.top = cursorY - 10 + 'px';
-        requestAnimationFrame(updateCursor);
-    }
-    updateCursor();
 
     // スクロールイベント
     window.addEventListener('scroll', handleScroll);
