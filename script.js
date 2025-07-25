@@ -10,12 +10,29 @@ document.addEventListener("DOMContentLoaded", () => {
             tab.classList.add("active");
 
             // すべてのコンテンツから active クラスを外す
-            contents.forEach(content => content.classList.remove("active"));
+            contents.forEach(content => {
+                content.classList.remove("active");
+                // フェードアウト効果のためのクラスを追加
+                content.classList.add("fade-out");
+            });
 
-            // data-tab の値に対応する要素を取得して active クラスを追加
+            // data-tab の値に対応する要素を取得
             const targetContent = document.getElementById(tab.dataset.tab);
             if (targetContent) {
-                targetContent.classList.add("active");
+                // 少し遅延してからフェードイン効果を適用
+                setTimeout(() => {
+                    // フェードアウトクラスを削除
+                    contents.forEach(content => content.classList.remove("fade-out"));
+                    // ターゲットコンテンツにactiveクラスを追加
+                    targetContent.classList.add("active");
+                    // フェードイン効果を確実に適用
+                    targetContent.classList.add("fade-in-active");
+                    
+                    // フェードイン完了後にクラスをリセット
+                    setTimeout(() => {
+                        targetContent.classList.remove("fade-in-active");
+                    }, 300);
+                }, 50);
             } else {
                 console.error(`Tab content with id "${tab.dataset.tab}" not found.`);
             }
@@ -72,6 +89,23 @@ document.addEventListener("DOMContentLoaded", () => {
         el.style.transitionDelay = `${index * 0.1}s`;
         el.classList.add('fade-in');
         observer.observe(el);
+    });
+
+    // FAQ の開閉機能
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            // 他のFAQを閉じる
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // 現在のFAQの開閉を切り替え
+            item.classList.toggle('active');
+        });
     });
 
     // スムーズスクロールの強化
