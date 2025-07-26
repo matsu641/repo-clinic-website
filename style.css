@@ -29,7 +29,7 @@
     
     --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     --gradient-dark: linear-gradient(135deg, var(--secondary-color) 0%, var(--dark-primary) 100%);
-    --gradient-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --gradient-background: linear-gradient(135deg, #f8fafb 0%, #e8f4f8 100%);
 }
 
 body {
@@ -1088,4 +1088,3 @@ footer {
         padding: 0 20px !important;
     }
   }
-  
