@@ -206,9 +206,9 @@
             <div class="other" itemscope itemtype="https://schema.org/MedicalClinic">
                 <h2>診療科目</h2>
                 <ul>
-                    <li itemprop="medicalSpecialty">リウマチ科</li>
                     <li itemprop="medicalSpecialty">整形外科</li>
                     <li itemprop="medicalSpecialty">リハビリテーション科</li>
+                    <li itemprop="medicalSpecialty">リウマチ科</li>
                 </ul>
                 
                 <h2>診療時間</h2>
@@ -231,45 +231,45 @@
                     </tr>
                     <tr>
                         <td>休診日</td>
-                        <td colspan="2">木曜日、祝祭日</td>
+                        <td colspan="2">木曜日、日曜、祝祭日</td>
                     </tr>
                 </table>
 
-                <h2>診療の流れ</h2>
-                <div class="flow-container">
-                    <div class="flow-step">
-                        <div class="flow-number">1</div>
-                        <div class="flow-content">
-                            <h3>受付</h3>
-                            <p>初診の方は保険証と診察券をお持ちください。問診票にご記入いただきます。</p>
-                        </div>
+                <h2>当院を初めて受診される方へ</h2>
+
+                <!-- 情報カード -->
+                <div class="visit-cards-grid">
+                    <div class="visit-card">
+                        <div class="visit-icon">📅</div>
+                        <h3>予約について</h3>
+                        <p>予約された患者様を優先的に診察して<br>おりますが、予約をされていない場合<br>でも対応させていただきます。</p>
                     </div>
-                    <div class="flow-step">
-                        <div class="flow-number">2</div>
-                        <div class="flow-content">
-                            <h3>診察</h3>
-                            <p>医師が症状をお聞きし、必要に応じてレントゲンやCT検査を行います。</p>
-                        </div>
+                    
+                    <div class="visit-card">
+                        <div class="visit-icon">💳</div>
+                        <h3>お支払い方法</h3>
+                        <p>会計方法は現金のみとなっております。<br>クレジットカードや電子マネーは<br>ご利用いただけません。</p>
                     </div>
-                    <div class="flow-step">
-                        <div class="flow-number">3</div>
-                        <div class="flow-content">
-                            <h3>治療・リハビリ</h3>
-                            <p>診断結果に基づき、最適な治療プランをご提案いたします。</p>
-                        </div>
+                    
+                    <div class="visit-card">
+                        <div class="visit-icon">🆔</div>
+                        <h3>保険証について</h3>
+                        <p>保険証またはマイナンバーカードを<br>お持ちください。月初めには保険証の<br>確認をさせていただいております。</p>
                     </div>
-                    <div class="flow-step">
-                        <div class="flow-number">4</div>
-                        <div class="flow-content">
-                            <h3>お会計・次回予約</h3>
-                            <p>受付でお会計と次回のご予約をお取りいたします。</p>
-                        </div>
+                    
+                    <div class="visit-card">
+                        <div class="visit-icon">💊</div>
+                        <h3>お薬について</h3>
+                        <p>処方されたお薬は当院で直接<br>お受け取りいただけます。<br>別の薬局に行く必要はありません。</p>
+                    </div>
+                    
+                    <div class="visit-card">
+                        <div class="visit-icon">🚗</div>
+                        <h3>駐車場について</h3>
+                        <p>20台分の駐車場をご用意しております。<br>お車でお越しの際も安心して<br>ご利用ください。</p>
                     </div>
                 </div>
                 <br>
-                <p>当院では、予約された患者様を優先的に診察しておりますが、予約をされていない場合でも対応させていただきます。</p>
-                
-                <p>どうぞお気軽にご来院ください。</p>
                 <br>
                 <h2>お願い</h2>
                 <ul>
@@ -455,7 +455,7 @@
                         <ul class="symptom-list">
                             <li>骨折</li>
                             <li>骨癒合が遅れている</li>
-                            <li>スポーツの早期復帰を目指す治療</li>
+                            <li>スポーツの早期復帰を目指す</li>
                         </ul>
                     </div>
         
@@ -489,10 +489,6 @@
             </ul>
         </div>
 
-            <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-                住所: 〒<span itemprop="postalCode">370-3601</span> 
-                <span itemprop="addressRegion">群馬県</span><span itemprop="addressLocality">北群馬郡吉岡町</span><span itemprop="streetAddress">漆原1179</span>
-            </address>
 
             <div id="map" role="img" aria-label="くわばら整形外科の地図">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12838.551242218142!2d139.0195979662896!3d36.44213971948205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8b278cc10bf7%3A0x51343a32dd6ffb7f!2z44GP44KP44Gw44KJ5pW05b2i5aSW56eR!5e0!3m2!1sja!2sca!4v1740875199113!5m2!1sja!2sca" 
