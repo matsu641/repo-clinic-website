@@ -6,8 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
             // すべてのタブから active クラスを外す
-            tabs.forEach(t => t.classList.remove("active"));
+            tabs.forEach(t => {
+                t.classList.remove("active");
+                t.setAttribute("aria-selected", "false");
+            });
             tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
 
             // すべてのコンテンツから active クラスを外す
             contents.forEach(content => {

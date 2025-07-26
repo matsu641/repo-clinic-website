@@ -5,9 +5,16 @@
           "@context": "https://schema.org",
           "@type": "MedicalClinic",
           "name": "くわばら整形外科",
-          "image": "https://サイトURL/images/clinic.jpg",
+          "alternateName": "kuwabara orthopedic clinic",
+          "image": [
+            "https://サイトURL/images/clinic.jpg",
+            "https://サイトURL/images/clinic2.jpg",
+            "https://サイトURL/images/clinic3.jpg"
+          ],
           "url": "https://サイトURL/",
-          "telephone": "0279-25-8855",
+          "telephone": "+81-279-25-8855",
+          "faxNumber": "+81-279-25-8855",
+          "email": "info@kuwabara-clinic.jp",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "漆原1179",
@@ -16,14 +23,72 @@
             "postalCode": "370-3601",
             "addressCountry": "JP"
           },
-          "openingHours": [
-            "Mo-Fr 08:00-12:00",
-            "Mo-Fr 14:50-19:00",
-            "Sa 08:00-12:00",
-            "Sa 14:00-17:00"
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.44213971948205",
+            "longitude": "139.0195979662896"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+              "opens": "08:00",
+              "closes": "12:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Friday"],
+              "opens": "14:50",
+              "closes": "19:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday"],
+              "opens": "08:00",
+              "closes": "12:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Saturday"],
+              "opens": "14:00",
+              "closes": "17:00"
+            }
           ],
-          "medicalSpecialty": "Orthopedic",
-          "description": "群馬県吉岡町にある整形外科・リウマチ科・リハビリテーション科のくわばら整形外科です。"
+          "medicalSpecialty": [
+            "Orthopedic",
+            "Rheumatology",
+            "Physical Medicine and Rehabilitation"
+          ],
+          "description": "群馬県吉岡町にある整形外科・リウマチ科・リハビリテーション科のくわばら整形外科です。体外衝撃波治療をはじめとした最新のリハビリ機器を導入し、地域に根ざした医療を提供しています。",
+          "priceRange": "$$",
+          "currenciesAccepted": "JPY",
+          "paymentAccepted": ["Cash", "Insurance"],
+          "hasMap": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12838.551242218142!2d139.0195979662896!3d36.44213971948205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8b278cc10bf7%3A0x51343a32dd6ffb7f!2z44GP44KP44Gw44KJ5pW05b2i5aSW56eR!5e0!3m2!1sja!2sca!4v1740875199113!5m2!1sja!2sca",
+          "areaServed": {
+            "@type": "City",
+            "name": "吉岡町",
+            "containedInPlace": {
+              "@type": "State",
+              "name": "群馬県"
+            }
+          },
+          "founder": {
+            "@type": "Person",
+            "name": "院長",
+            "alumniOf": {
+              "@type": "EducationalOrganization",
+              "name": "金沢大学医学部医学科"
+            }
+          },
+          "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": "36.44213971948205",
+              "longitude": "139.0195979662896"
+            },
+            "geoRadius": "20000"
+          }
         }
         </script>
         
@@ -32,60 +97,87 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
+            <!-- Favicon -->
+            <link rel="icon" type="image/x-icon" href="images/fabicon.jpg">
+            <link rel="apple-touch-icon" href="images/fabicon.jpg">
+            
             <!-- SEO用の説明文 -->
-            <meta name="description" content="群馬県吉岡町のくわばら整形外科では、整形外科・リウマチ科・リハビリテーション科を中心に、地域に根ざした安心・丁寧な医療を提供します。">
+            <meta name="description" content="群馬県吉岡町のくわばら整形外科では、整形外科・リウマチ科・リハビリテーション科を中心に、地域に根ざした安心・丁寧な医療を提供します。診療時間：平日8:00-12:00、14:50-19:00、土曜8:00-12:00、14:00-17:00。TEL:0279-25-8855">
             
             <!-- SEO用キーワード -->
-            <meta name="keywords" content="くわばら整形外科, 整形外科 吉岡町, リハビリ 吉岡町, 群馬県 整形外科, リウマチ科, 整形クリニック, くわばら医院">
+            <meta name="keywords" content="くわばら整形外科, 整形外科 吉岡町, リハビリ 吉岡町, 群馬県 整形外科, リウマチ科, 整形クリニック, くわばら医院, 体外衝撃波治療, 干渉波治療, 北群馬郡">
+            
+            <!-- 検索エンジン向け -->
+            <meta name="robots" content="index, follow">
+            <meta name="author" content="くわばら整形外科">
+            <meta name="language" content="ja">
+            <meta name="geo.region" content="JP-10">
+            <meta name="geo.placename" content="吉岡町">
+            <meta name="geo.position" content="36.44213971948205;139.0195979662896">
+            <meta name="ICBM" content="36.44213971948205, 139.0195979662896">
         
             <!--  ページタイトル -->
-            <title>くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ</title>
+            <title>くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ・リウマチ科</title>
         
             <!--  SNSやLINEでシェアされたときの表示（Open Graph） -->
-            <meta property="og:title" content="くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ">
-            <meta property="og:description" content="地域に根ざした整形外科・リハビリのクリニック。安心・丁寧な医療を提供します。">
+            <meta property="og:title" content="くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ・リウマチ科">
+            <meta property="og:description" content="群馬県吉岡町の整形外科・リウマチ科・リハビリテーション科。体外衝撃波治療など最新機器を導入。地域に根ざした安心・丁寧な医療を提供します。">
             <meta property="og:image" content="https://サイトURL/images/clinic.jpg"> 
             <meta property="og:url" content="https://サイトURL">
             <meta property="og:type" content="website">
+            <meta property="og:site_name" content="くわばら整形外科">
+            <meta property="og:locale" content="ja_JP">
+            
+            <!-- Twitter Card -->
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="くわばら整形外科 | 群馬県吉岡町の整形外科・リハビリ・リウマチ科">
+            <meta name="twitter:description" content="群馬県吉岡町の整形外科・リウマチ科・リハビリテーション科。体外衝撃波治療など最新機器を導入。">
+            <meta name="twitter:image" content="https://サイトURL/images/clinic.jpg">
+            
+            <!-- JSON-LD構造化データは後で追加 -->
 
         
             <!-- CSS -->
             <link rel="stylesheet" href="style.css">
             <!-- Swiper.js（スライドショー用） -->
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+            
+            <!-- Preload critical resources for better performance -->
+            <link rel="preload" href="images/clinic.jpg" as="image">
+            <link rel="preload" href="images/logo.jpg" as="image">
         </head>
         
 
 <body>
     <!-- ヘッダー -->
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="ロゴ" class="logo-img">
+    <header role="banner">
+        <div class="logo" itemscope itemtype="https://schema.org/MedicalOrganization">
+            <img src="images/logo.jpg" alt="くわばら整形外科 ロゴ" class="logo-img" itemprop="logo">
 
             <div class="logo-text">
-                <h1>くわばら整形外科</h1>
-                <p class="tel">TEL: 0279-25-8855</p>
+                <h1 itemprop="name">くわばら整形外科</h1>
+                <p class="tel" itemprop="telephone">TEL: 0279-25-8855</p>
             </div>
         </div>   
 
-        <nav>
+        <nav role="navigation" aria-label="メインナビゲーション">
             <ul>
-                <li class="tab active" data-tab="home">ホーム</li>
-                <li class="tab" data-tab="about">診療案内</li>
-                <li class="tab" data-tab="rihab">リハビリ</li>
-                <li class="tab" data-tab="access">アクセス</li>
+                <li class="tab active" data-tab="home" role="tab" aria-selected="true">ホーム</li>
+                <li class="tab" data-tab="about" role="tab" aria-selected="false">診療案内</li>
+                <li class="tab" data-tab="rihab" role="tab" aria-selected="false">リハビリ</li>
+                <li class="tab" data-tab="access" role="tab" aria-selected="false">アクセス</li>
             </ul>
         </nav>
     </header>
 
     <!-- コンテンツエリア -->
-    <main>
+    <main role="main">
         <!-- ホーム（スライドショー） -->
-        <section id="home" class="tab-content active">
-            <div class="swiper-container">
+        <section id="home" class="tab-content active" role="tabpanel" aria-labelledby="home-tab">
+            <div class="swiper-container" role="img" aria-label="クリニック紹介スライドショー">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/clinic.jpg" alt="スライド1">
+                        <img src="images/clinic.jpg" alt="くわばら整形外科の外観 - 安心の医療で皆様を支えます">
                         <div class="slide-caption">
                             <h2>安心の医療で</h2>
                             <h2>皆様を支えます</h2>
@@ -93,14 +185,14 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/clinic2.jpg" alt="スライド2">
+                        <img src="images/clinic2.jpg" alt="くわばら整形外科の診療室 - 体の再生と機能回復をサポート">
                         <div class="slide-caption">
                             <h2>体の再生と機能回復をサポート</h2>
                             <p>快適な診療環境を提供します</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/clinic3.jpg" alt="スライド3">
+                        <img src="images/clinic3.jpg" alt="くわばら整形外科のリハビリテーション室 - 患者さんに寄り添った回復プログラム">
                         <div class="slide-caption">
                             <h2>患者さんに寄り添った</h2>
                             <h2>回復プログラム</h2>
@@ -108,28 +200,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination" role="tablist" aria-label="スライドページネーション"></div>
             </div>
 
-            <div class="other">
+            <div class="other" itemscope itemtype="https://schema.org/MedicalClinic">
                 <h2>診療科目</h2>
                 <ul>
-                    <li>リウマチ科</li>
-                    <li>整形外科</li>
-                    <li>リハビリテーション科</li>
+                    <li itemprop="medicalSpecialty">リウマチ科</li>
+                    <li itemprop="medicalSpecialty">整形外科</li>
+                    <li itemprop="medicalSpecialty">リハビリテーション科</li>
                 </ul>
                 
                 <h2>診療時間</h2>
-                <table>
+                <table itemscope itemtype="https://schema.org/OpeningHoursSpecification">
+                    <caption class="sr-only">くわばら整形外科の診療時間表</caption>
                     <tr>
-                        <th>曜日</th>
-                        <th>午前</th>
-                        <th>午後</th>
+                        <th scope="col">曜日</th>
+                        <th scope="col">午前</th>
+                        <th scope="col">午後</th>
                     </tr>
                     <tr>
                         <td>月〜金</td>
-                        <td>8:00 - 12:00</td>
-                        <td>14:50 - 19:00</td>
+                        <td itemprop="opens">8:00 - 12:00</td>
+                        <td itemprop="closes">14:50 - 19:00</td>
                     </tr>
                     <tr>
                         <td>土</td>
@@ -193,22 +286,27 @@
                 <br>
                 
                 <!-- お問い合わせボタン -->
-                <div class="contact-section">
+                <div class="contact-section" itemscope itemtype="https://schema.org/ContactPoint">
                     <h2>お問い合わせ・ご予約</h2>
                     <p>お電話でのご予約・お問い合わせを承っております</p>
-                    <a href="tel:0279-25-8855" class="contact-button">
+                    <a href="tel:+81-279-25-8855" class="contact-button" itemprop="telephone" aria-label="電話でご予約・お問い合わせ">
                         📞 お電話でご予約・お問い合わせ
                     </a>
+                    <meta itemprop="contactType" content="customer service">
+                    <meta itemprop="areaServed" content="群馬県">
+                    <meta itemprop="availableLanguage" content="Japanese">
                 </div>
             </div>
         </section>
 
         <!-- 診療案内（院長紹介と院内紹介） -->
-        <section id="about" class="tab-content">
+        <section id="about" class="tab-content" role="tabpanel" aria-labelledby="about-tab">
             <h2>院長紹介</h2>
-            <div class="director">
-                <img src="images/doctor.jpg" alt="院長写真">
-                <p class="director-education">金沢大学 医学部医学科 卒業</p>
+            <div class="director" itemscope itemtype="https://schema.org/Person">
+                <img src="images/doctor.jpg" alt="くわばら整形外科 院長の写真" itemprop="image">
+                <p class="director-education" itemprop="alumniOf">金沢大学 医学部医学科 卒業</p>
+                <meta itemprop="jobTitle" content="院長">
+                <meta itemprop="worksFor" content="くわばら整形外科">
             </div>
 
             <!-- 院長から一言セクション -->
@@ -230,25 +328,25 @@
             <h2>院内の紹介</h2>
             <div class="facility-gallery">
                 <div class="facility1">
-                    <h3> 受付 </h3>
-                    <img src="images/reception.jpg" alt="受付">
+                    <h3>受付</h3>
+                    <img src="images/reception.jpg" alt="くわばら整形外科の受付カウンター - 明るく清潔な受付エリア">
                     
                 </div>
                 <div class="facility2">
-                    <h3> 待合室 </h3>
-                    <img src="images/waitingroom.jpg" alt="待合室">
+                    <h3>待合室</h3>
+                    <img src="images/waitingroom.jpg" alt="くわばら整形外科の待合室 - 患者様がくつろげる明るい待合スペース">
                     
                 </div>
             </div>
         </section>
 
         <!-- リハビリ -->
-        <section id="rihab" class="tab-content rehab-section">
+        <section id="rihab" class="tab-content rehab-section" role="tabpanel" aria-labelledby="rihab-tab">
             <div class="rehab-facility">
-                <img src="images/rehab.jpg" alt="リハビリ室" class="rehab-main-image">
+                <img src="images/rehab.jpg" alt="くわばら整形外科のリハビリテーション室 - 最新のリハビリ機器を完備" class="rehab-main-image">
                 
                 <h2>リハビリで使用する医療機器と適応症状</h2>
-                <div class="rehab-container">
+                <div class="rehab-container" itemscope itemtype="https://schema.org/MedicalDevice">
 
                     <!-- 体外衝撃波治療 -->
                     <div class="rehab-card">
@@ -370,10 +468,10 @@
         </section>
         
         <!-- アクセス -->
-        <section id="access" class="tab-content">
+        <section id="access" class="tab-content" role="tabpanel" aria-labelledby="access-tab">
             <h2>アクセス</h2>
 
-        <div class="access-container">
+        <div class="access-container" itemscope itemtype="https://schema.org/Place">
             <h3>車でお越しの方</h3>
             <ul>
                 <li>群馬総社駅から <strong>約10分</strong></li>
@@ -391,19 +489,31 @@
             </ul>
         </div>
 
-            <p>住所: 〒370-3601 群馬県北群馬郡吉岡町漆原1179 </p>
+            <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                住所: 〒<span itemprop="postalCode">370-3601</span> 
+                <span itemprop="addressRegion">群馬県</span><span itemprop="addressLocality">北群馬郡吉岡町</span><span itemprop="streetAddress">漆原1179</span>
+            </address>
 
-            <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12838.551242218142!2d139.0195979662896!3d36.44213971948205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8b278cc10bf7%3A0x51343a32dd6ffb7f!2z44GP44KP44Gw44KJ5pW05b2i5aSW56eR!5e0!3m2!1sja!2sca!4v1740875199113!5m2!1sja!2sca" width="80%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
+            <div id="map" role="img" aria-label="くわばら整形外科の地図">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12838.551242218142!2d139.0195979662896!3d36.44213971948205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601e8b278cc10bf7%3A0x51343a32dd6ffb7f!2z44GP44KP44Gw44KJ5pW05b2i5aSW56eR!5e0!3m2!1sja!2sca!4v1740875199113!5m2!1sja!2sca" 
+                        width="80%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="くわばら整形外科への地図">
+                </iframe>
             </div>
             
             <br>
         </section>
     </main>
 
-    <footer>
-        <p>© 2025 くわばら整形外科 All Rights Reserved.</p>
+    <footer role="contentinfo" itemscope itemtype="https://schema.org/Organization">
+        <p>© 2025 <span itemprop="name">くわばら整形外科</span> All Rights Reserved.</p>
+        <meta itemprop="address" content="群馬県北群馬郡吉岡町漆原1179">
+        <meta itemprop="telephone" content="+81-279-25-8855">
     </footer>
     
 <!-- Swiper.js -->

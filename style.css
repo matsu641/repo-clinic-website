@@ -1,3 +1,22 @@
+/* アクセシビリティとSEO向上のためのスタイル */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* フォーカス時の視覚的な表示を改善 */
+a:focus, button:focus, [tabindex]:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 /* CSS変数の定義 */
 :root {
     --primary-color: #66cdaa;
