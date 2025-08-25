@@ -1208,6 +1208,9 @@ table tr:last-child td {
     box-shadow: 0 8px 25px rgba(102, 205, 170, 0.15);
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px;
 }
 
 .rehab-card:before {
@@ -1271,11 +1274,32 @@ table tr:last-child td {
     padding-left: 5px;
 }
 
+/* カード内容部分（説明文）を柔軟に拡張 */
+.rehab-card-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 適応症状セクションを下部に固定 */
+.symptom-section {
+    margin-top: auto;
+    background: linear-gradient(135deg, #f8fbff 0%, #eef7f0 100%);
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    border-top: 2px solid rgba(102, 205, 170, 0.3);
+}
+
 .rehab-card .symptom-title {
     font-size: 14px;
     margin-bottom: 10px;
-    margin-top: 15px;
+    margin-top: 0;
     padding-left: 5px;
+    color: #2c5530;
+    font-weight: 600;
 }
 
 .rehab-card .symptom-list {
