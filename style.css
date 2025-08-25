@@ -280,6 +280,7 @@ header .main-nav ul li.active {
         flex-wrap: nowrap;
         align-items: center;
         min-height: 80px;
+        position: relative;
     }
     
     .logo {
@@ -318,23 +319,31 @@ header .main-nav ul li.active {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        position: relative;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
         z-index: 1001;
+        background: rgba(102, 205, 170, 0.9);
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        width: 48px;
+        height: 48px;
     }
     
     /* モバイルナビゲーション */
     .main-nav {
         position: fixed;
-        top: 80px;
+        top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: calc(100vh - 80px);
+        width: 85%;
+        max-width: 320px;
+        height: 100vh;
         background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         overflow-y: auto;
+        padding-top: 80px;
     }
     
     .main-nav.active {
@@ -344,9 +353,10 @@ header .main-nav ul li.active {
     header .main-nav ul {
         flex-direction: column;
         gap: 0;
-        padding: 2rem 0;
-        height: 100%;
+        padding: 1rem 0;
+        height: auto;
         align-items: stretch;
+        margin: 0;
     }
     
     header .main-nav ul li {
@@ -354,11 +364,12 @@ header .main-nav ul li.active {
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 0;
-        padding: 20px 2rem;
+        padding: 18px 2.5rem;
         font-size: 16px;
         text-align: left;
         white-space: normal;
         transition: all 0.3s ease;
+        margin: 0;
     }
     
     header .main-nav ul li:hover {
@@ -370,6 +381,7 @@ header .main-nav ul li.active {
     header .main-nav ul li.active {
         background-color: rgba(255, 255, 255, 0.2);
         border-left: 4px solid white;
+        padding-left: calc(1rem - 4px);
     }
     
     header .main-nav ul li:last-child {
@@ -379,10 +391,10 @@ header .main-nav ul li.active {
     /* モバイルメニューオーバーレイ */
     .mobile-menu-overlay {
         position: fixed;
-        top: 80px;
+        top: 0;
         left: 0;
         width: 100%;
-        height: calc(100vh - 80px);
+        height: 100vh;
         background: rgba(0, 0, 0, 0.5);
         opacity: 0;
         visibility: hidden;
@@ -419,13 +431,25 @@ header .main-nav ul li.active {
         font-size: 13px;
     }
     
+    .mobile-menu-toggle {
+        top: 0.8rem;
+        right: 0.8rem;
+        width: 44px;
+        height: 44px;
+    }
+    
     .main-nav {
-        width: 85%;
+        width: 90%;
+        max-width: 280px;
     }
     
     header .main-nav ul li {
-        padding: 18px 1.5rem;
+        padding: 16px 0.8rem;
         font-size: 15px;
+    }
+    
+    header .main-nav ul li.active {
+        padding-left: calc(0.8rem - 4px);
     }
 }
 
@@ -439,8 +463,28 @@ header .main-nav ul li.active {
         font-size: 12px;
     }
     
+    .mobile-menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .hamburger-line {
+        width: 22px;
+        height: 2px;
+    }
+    
     .main-nav {
-        width: 90%;
+        width: 95%;
+        max-width: 260px;
+    }
+    
+    header .main-nav ul li {
+        padding: 15px 1rem;
+        font-size: 14px;
+    }
+    
+    header .main-nav ul li.active {
+        padding-left: calc(1rem - 4px);
     }
 }
 
