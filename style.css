@@ -1127,8 +1127,11 @@ table tr:last-child td {
 
 .director img {
     max-width: 250px;
+    width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .director-education {
@@ -1185,7 +1188,7 @@ table tr:last-child td {
     color: #555;
     font-size: 16px;
     margin-bottom: 15px;
-    padding-left: 100px;
+    padding-left: 20px;
 }
 
 .message-signature {
@@ -2156,5 +2159,385 @@ footer {
         width: 90% !important;
         height: 200px !important;
         margin: 0 auto !important;
+    }
+}
+
+/* =========================
+   各セクションのレスポンシブ対応
+   ========================= */
+
+/* ホームセクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    /* スライドショー */
+    .swiper-container {
+        height: 250px !important;
+    }
+    
+    .slide-caption {
+        padding: 15px !important;
+    }
+    
+    .slide-caption h2 {
+        font-size: 18px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    .slide-caption p {
+        font-size: 14px !important;
+    }
+    
+    /* 診療科目・診療時間 */
+    .other h2 {
+        font-size: 20px !important;
+        margin: 30px 0 15px 0 !important;
+    }
+    
+    .other ul {
+        padding: 0 20px !important;
+    }
+    
+    .other li {
+        font-size: 16px !important;
+        padding: 8px 0 !important;
+    }
+    
+    /* 診療時間テーブル */
+    .other table {
+        font-size: 14px !important;
+        margin: 0 10px !important;
+    }
+    
+    .other th, .other td {
+        padding: 8px 4px !important;
+    }
+    
+    /* 初診者向け情報カード */
+    .visit-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px !important;
+        margin: 20px 10px !important;
+    }
+    
+    .visit-card {
+        padding: 20px !important;
+    }
+    
+    .visit-card h3 {
+        font-size: 16px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .visit-card p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .visit-icon {
+        font-size: 24px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* お知らせ・お願い */
+    .other ul li {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    /* お問い合わせセクション */
+    .contact-section {
+        margin: 30px 20px !important;
+        padding: 20px !important;
+    }
+    
+    .contact-section h2 {
+        font-size: 18px !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .contact-section p {
+        font-size: 14px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .contact-button {
+        font-size: 16px !important;
+        padding: 15px 20px !important;
+    }
+}
+
+/* 当院についてセクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 20px !important;
+        margin: 30px 0 20px 0 !important;
+        text-align: center !important;
+    }
+    
+    /* 院長紹介 */
+    .director {
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 0 20px !important;
+    }
+    
+    .director img {
+        max-width: 200px !important;
+        width: 80% !important;
+        height: auto !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
+    }
+    
+    .director-education {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* 院長からのメッセージ */
+    .director-message {
+        margin: 30px 20px !important;
+        padding: 20px !important;
+    }
+    
+    .message-header h3 {
+        font-size: 18px !important;
+    }
+    
+    .message-content p {
+        font-size: 14px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 15px !important;
+        padding-left: 10px !important;
+    }
+    
+    .message-signature {
+        font-size: 14px !important;
+        margin-top: 20px !important;
+    }
+    
+    /* 院内紹介 */
+    .facility-gallery {
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 0 20px !important;
+    }
+    
+    .facility1, .facility2 {
+        width: 100% !important;
+    }
+    
+    .facility1 h3, .facility2 h3 {
+        font-size: 16px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
+    }
+    
+    .facility1 img, .facility2 img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 200px !important;
+        object-fit: cover !important;
+    }
+}
+
+/* 症状別案内セクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    #symptoms h2 {
+        font-size: 20px !important;
+        margin: 30px 0 20px 0 !important;
+        text-align: center !important;
+    }
+    
+    .symptoms-container {
+        padding: 0 15px !important;
+    }
+    
+    .symptom-card {
+        margin-bottom: 20px !important;
+        padding: 15px !important;
+    }
+    
+    .symptom-header {
+        margin-bottom: 15px !important;
+    }
+    
+    .symptom-header h3 {
+        font-size: 16px !important;
+    }
+    
+    .symptom-icon {
+        font-size: 20px !important;
+    }
+    
+    .symptom-content {
+        padding: 0 !important;
+    }
+    
+    .symptom-quote {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 10px !important;
+        padding: 10px !important;
+    }
+    
+    .symptom-content p {
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        margin-bottom: 12px !important;
+    }
+    
+    /* 診察案内 */
+    .consultation-notice {
+        margin: 30px 15px !important;
+        padding: 20px !important;
+    }
+    
+    .consultation-notice h3 {
+        font-size: 16px !important;
+    }
+    
+    .consultation-notice p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
+    
+    .notice-icon {
+        font-size: 20px !important;
+    }
+}
+
+/* アクセスセクションのレスポンシブ対応 */
+@media (max-width: 768px) {
+    #access h2 {
+        font-size: 20px !important;
+        margin: 30px 0 20px 0 !important;
+        text-align: center !important;
+    }
+    
+    .access-container {
+        padding: 0 20px !important;
+    }
+    
+    .access-section {
+        margin-bottom: 25px !important;
+        padding: 15px !important;
+        background: #f9f9f9 !important;
+        border-radius: 8px !important;
+    }
+    
+    .access-section h3 {
+        font-size: 16px !important;
+        margin-bottom: 10px !important;
+        color: #2c5aa0 !important;
+    }
+    
+    .access-section ul {
+        padding-left: 20px !important;
+    }
+    
+    .access-section li {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin-bottom: 8px !important;
+    }
+    
+    /* 地図 */
+    #map {
+        margin: 20px 10px !important;
+        height: 300px !important;
+    }
+    
+    #map iframe {
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: 8px !important;
+    }
+}
+
+/* タブレット向け院長写真調整（769px-1023px） */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .director img {
+        max-width: 220px !important;
+        width: 90% !important;
+    }
+    
+    .director {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+}
+
+/* 超小型デバイス対応（480px以下） */
+@media (max-width: 480px) {
+    /* 全体的な文字サイズ調整 */
+    .other h2, #about h2, #symptoms h2, #access h2 {
+        font-size: 18px !important;
+    }
+    
+    /* ホームセクション */
+    .swiper-container {
+        height: 200px !important;
+    }
+    
+    .slide-caption h2 {
+        font-size: 16px !important;
+    }
+    
+    .slide-caption p {
+        font-size: 12px !important;
+    }
+    
+    /* カード系要素 */
+    .visit-card, .symptom-card {
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .visit-card h3, .symptom-header h3 {
+        font-size: 15px !important;
+    }
+    
+    .visit-card p, .symptom-content p {
+        font-size: 13px !important;
+    }
+    
+    /* 院長写真 */
+    .director img {
+        max-width: 150px !important;
+        width: 70% !important;
+    }
+    
+    .director-education {
+        font-size: 13px !important;
+    }
+    
+    /* テーブル */
+    .other table {
+        font-size: 12px !important;
+    }
+    
+    .other th, .other td {
+        padding: 6px 2px !important;
+    }
+    
+    /* アクセス */
+    .access-section {
+        padding: 12px !important;
+    }
+    
+    .access-section h3 {
+        font-size: 15px !important;
+    }
+    
+    .access-section li {
+        font-size: 13px !important;
+    }
+    
+    /* 地図 */
+    #map {
+        height: 250px !important;
+        margin: 15px 5px !important;
     }
 }
