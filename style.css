@@ -1229,6 +1229,38 @@ table tr:last-child td {
     font-weight: 600;
 }
 
+/* リハビリ機器の画像スタイル */
+.rehab-card-image {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    margin: 10px 0 15px 0;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid rgba(102, 205, 170, 0.1);
+    transition: all 0.3s ease;
+}
+
+.rehab-card:hover .rehab-card-image {
+    border-color: rgba(102, 205, 170, 0.3);
+    transform: scale(1.02);
+}
+
+/* 牽引治療用の2つの画像レイアウト */
+.traction-images {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 15px 0;
+}
+
+.traction-images .rehab-card-image {
+    width: calc(50% - 5px);
+    height: 140px;
+    margin: 0;
+}
+
 .rehab-card p {
     font-size: 14px;
     margin-bottom: 5px;
@@ -1699,13 +1731,21 @@ footer {
         padding: 15px !important;
         margin-bottom: 15px !important;
     }
-    
-    .device-description p {
+      .device-description p {
         font-size: 13px !important;
         text-align: left !important;
         padding-left: 0 !important;
         padding-right: 0 !important;
         margin-left: 0 !important;
         margin-right: 0 !important;
+    }
+    
+    /* リハビリ機器画像のスマホ対応 */
+    .rehab-card-image {
+        height: 150px !important;
+    }
+    
+    .traction-images .rehab-card-image {
+        height: 120px !important;
     }
 }
