@@ -1439,6 +1439,57 @@ table tr:last-child td {
     padding-left: 30px;
 }
 
+/* リハビリテーション風景画像のスタイル */
+.rehab-therapy-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.rehab-therapy-image {
+    width: 45%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(102, 205, 170, 0.2);
+    box-shadow: 0 8px 25px rgba(102, 205, 170, 0.15);
+    transition: all 0.3s ease;
+}
+
+.rehab-therapy-image:hover {
+    transform: scale(1.02);
+    border-color: rgba(102, 205, 170, 0.4);
+    box-shadow: 0 12px 35px rgba(102, 205, 170, 0.25);
+}
+
+.rehab-specialty-images {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.rehab-specialty-image {
+    width: 45%;
+    max-width: 400px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid rgba(102, 205, 170, 0.2);
+    box-shadow: 0 8px 25px rgba(102, 205, 170, 0.15);
+    transition: all 0.3s ease;
+}
+
+.rehab-specialty-image:hover {
+    transform: scale(1.02);
+    border-color: rgba(102, 205, 170, 0.4);
+    box-shadow: 0 12px 35px rgba(102, 205, 170, 0.25);
+}
+
 .reservation-notice {
     background: linear-gradient(135deg, #e8f4f8 0%, #d4f1f4 100%);
     border: 2px solid rgba(102, 205, 170, 0.2);
@@ -1744,8 +1795,22 @@ footer {
     .rehab-card-image {
         height: 150px !important;
     }
-    
-    .traction-images .rehab-card-image {
+      .traction-images .rehab-card-image {
         height: 120px !important;
+    }
+    
+    /* リハビリ風景画像のモバイル対応 */
+    .rehab-therapy-images,
+    .rehab-specialty-images {
+        flex-direction: column !important;
+        margin: 20px 0 !important;
+        gap: 15px !important;
+    }
+    
+    .rehab-therapy-image,
+    .rehab-specialty-image {
+        width: 90% !important;
+        height: 200px !important;
+        margin: 0 auto !important;
     }
 }
