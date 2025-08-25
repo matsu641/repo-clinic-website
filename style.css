@@ -1448,11 +1448,13 @@ table tr:last-child td {
     background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
     border-radius: 20px;
     padding: 30px;
-    margin: 30px;
+    margin: 30px auto;
     box-shadow: 0 10px 30px rgba(102, 205, 170, 0.3);
     color: white;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    max-width: 800px;
 }
 
 .special-therapy::before {
@@ -1479,6 +1481,7 @@ table tr:last-child td {
     display: flex;
     align-items: flex-start;
     gap: 25px;
+    justify-content: center;
 }
 
 .therapy-icon {
@@ -1658,9 +1661,8 @@ footer {
         padding-left: 0 !important;
         padding-right: 0 !important;
     }
-    
-    .special-therapy {
-        margin: 20px !important;
+      .special-therapy {
+        margin: 20px auto !important;
         padding: 20px !important;
     }
     
