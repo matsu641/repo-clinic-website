@@ -1196,6 +1196,239 @@ table tr:last-child td {
     margin-left: -10px;
 }
   
+/* リハビリ室概要セクション */
+.rehab-overview {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px 50px;
+    box-shadow: 0 10px 30px rgba(102, 205, 170, 0.15);
+    border: 1px solid rgba(102, 205, 170, 0.1);
+}
+
+.overview-content {
+    line-height: 1.8;
+}
+
+.overview-content p {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.staff-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(102, 205, 170, 0.1);
+    border: 2px solid rgba(102, 205, 170, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #66cdaa, #5bb89a);
+    border-radius: 15px 15px 0 0;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(102, 205, 170, 0.2);
+}
+
+.feature-icon {
+    font-size: 48px;
+    color: #66cdaa;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    filter: drop-shadow(0 3px 6px rgba(102, 205, 170, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.feature-card h4 {
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
+.feature-card p {
+    color: #5a6c7d;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+    padding-left: 0;
+}
+
+/* リハビリテーション特徴セクション */
+.rehab-characteristics {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 30px 50px;
+    box-shadow: 0 10px 30px rgba(102, 205, 170, 0.15);
+    border: 1px solid rgba(102, 205, 170, 0.1);
+}
+
+.characteristics-content {
+    line-height: 1.8;
+}
+
+.characteristics-content p {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.reservation-notice {
+    background: linear-gradient(135deg, #e8f4f8 0%, #d4f1f4 100%);
+    border: 2px solid rgba(102, 205, 170, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.reservation-notice::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+}
+
+.reservation-notice:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(102, 205, 170, 0.15);
+}
+
+.reservation-notice p {
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    padding-left: 0;
+}
+
+.special-therapy {
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 30px;
+    box-shadow: 0 10px 30px rgba(102, 205, 170, 0.3);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.special-therapy::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: floatLight 6s ease-in-out infinite;
+}
+
+.special-therapy h3 {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.therapy-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.therapy-icon {
+    font-size: 48px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.therapy-details p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 15px 0;
+    padding-left: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.therapy-details .request-note {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+/* 機器説明の詳細スタイル */
+.device-description {
+    background: rgba(102, 205, 170, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #66cdaa;
+}
+
+.device-description p {
+    color: #2c3e50;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    padding-left: 0;
+}
+
+.device-description p:last-child {
+    margin-bottom: 0;
+}
+
+.device-description strong {
+    color: #2c5f5d;
+    font-weight: 600;
+}
+  
 /* アクセス情報 */
 .access-container {
     background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
@@ -1252,208 +1485,14 @@ footer {
     padding: 10px;
 }
 
-.tel {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/*スマホ画面用*/
-@media screen and (max-width: 768px) {
-    body {
-        font-size: 14px !important;
-        width: 100%;
-        max-width: 100vw;
-        overflow-x: hidden;
-    }
-
-    .swiper-container {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .swiper-slide {
-        width: 100%;
-        overflow: hidden;
-    }
-
-    p, li {
-        font-size: 14px !important;
-        line-height: 1.6 !important;
-        text-align: left;
-    }
-
-    .tab-content h2 {
-        text-align: center !important;
-        padding-left: 0 !important;
-        display: inline-block;
-        width: auto;
-        margin: 0 auto 2rem auto;
-    }
-    
-    /* 診療案内とアクセスタブのタイトルに左padding */
-    #about h2,
-    #access h2,
-    #symptoms h2 {
-        text-align: left !important;
-        padding-left: 20px !important;
-        display: inline-block !important;
-        width: auto !important;
-        margin: 0 0 2rem 20px !important;
-    }
-    
-    /* 診療案内とアクセスタブのタイトルのアンダーラインを調整 */
-    #about h2:after,
-    #access h2:after,
-    #symptoms h2:after {
-        width: calc(100% + 20px) !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    .tab-content h2:after {
-        width: calc(100% + 20px);
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .tab-content p,
-    .tab-content li {
-        padding-left: 20px !important;
-        padding-right: 20px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    h2 {
-        font-size: 18px !important;
-    }
-
-    h3 {
-        font-size: 16px !important;
-        font-weight: normal !important;
-    }
-
-    table td, table th {
-        font-size: 12px !important;
-    }
-
-    .rehab-card p,
-    .rehab-card li {
-        font-size: 13px !important;
-    }
-    
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    /*ロゴ*/
-    .logo {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-    
-      .logo-text h1 {
-        font-size: 18px !important;
-      }
-    
-      .tel {
-        font-size: 13px !important;
-      }
-
-    header nav ul {
-      flex-direction: column;
-      gap: 0.5rem;
-      padding: 0;
-      margin-top: 1rem;
-    }
-    
-    .logo-img {
-        height: 60px;
-        width: 60px;
-    }
-  
-    /*リハビリタイトルとテキストサイズ調整 */
-    #rihab h2 {
-        font-size: 18px !important;
-        text-align: center;
-        margin-bottom: 10px;
-    }
-  
-    .rehab-card h3 {
-        font-size: 16px !important;
-        font-weight: bold !important;
-    }
-  
-    .rehab-card p,
-    .symptom-title,
-    .symptom-list li {
-        font-size: 13px !important;
-    }
-  
-    .rehab-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .rehab-card {
-      width: 90%;
-    }
-    
-    /* スマホでリハビリカード内を中央寄せ */
-    .rehab-card p,
-    .rehab-card .symptom-title {
-        text-align: center !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-    
-    .rehab-card .symptom-list {
-        text-align: left !important;
-        padding-left: 70px !important;
-        padding-right: 10px !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        list-style-type: disc !important;
-    }
-    
-    .rehab-card .symptom-list li {
-        text-align: left !important;
-        margin-bottom: 8px !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-  
-    .facility-gallery {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .facility1, .facility2 {
-      width: 90%;
-    }
-
-    .director img {
-        max-width: 200px !important;
-    }
-    
-    /* 院長から一言セクション（スマホ版） */
-    .director-message {
+/* リハビリ室概要（スマホ版） */
+@media (max-width: 768px) {
+    .rehab-overview {
         margin: 30px 20px !important;
         padding: 20px !important;
     }
     
-    .message-header h3 {
-        font-size: 18px !important;
-        text-align: center !important;
-    }
-    
-    .message-content p {
+    .overview-content p {
         font-size: 14px !important;
         text-align: left !important;
         padding-left: 0 !important;
@@ -1462,146 +1501,39 @@ footer {
         margin-right: 0 !important;
     }
     
-    .message-signature {
-        text-align: center !important;
-    }
-  
-    table {
-      width: 90%;
-      max-width: 100%;
-      margin: 1rem auto;
-      font-size: 12px !important;
-    }
-  
-    .slide-caption h2 {
-      font-size: 24px !important;
-      color: white !important;
-    }
-  
-    .slide-caption p {
-      font-size: 14px !important;
-      white-space: nowrap !important;
-      overflow: hidden !important;
-      text-overflow: ellipsis !important;
-      max-width: 90% !important;
-      margin: 0 auto !important;
-      color: white !important;
-    }
-
-    .other {
-        padding-left: 20px;
-        padding-right: 20px;
+    .staff-features {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-top: 20px !important;
     }
     
-    .other h2 {
-        padding-left: 0;
-        text-align: center;
+    .feature-card {
+        padding: 20px !important;
     }
     
-    .other ul,
-    .other p {
-        margin-left: 0;
-        margin-right: 0;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    /* 診療の流れ（スマホ版） */
-    .flow-container {
-        margin: 20px 15px;
-        gap: 15px;
-    }
-    
-    .flow-step {
-        flex-direction: column;
-        text-align: center;
-        padding: 15px;
-        gap: 15px;
-    }
-    
-    .flow-number {
-        width: 40px;
-        height: 40px;
-        font-size: 18px;
-    }
-    
-    .flow-content h3 {
+    .feature-card h4 {
         font-size: 16px !important;
         text-align: center !important;
     }
     
-    .flow-content p {
-        font-size: 13px !important;
+    .feature-card p {
+        font-size: 14px !important;
         text-align: center !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-
-    .access-container {
-        margin: 20px;
-        gap: 15px;
-        grid-template-columns: 1fr;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
-    .access-card {
-        padding: 20px;
-        margin-bottom: 15px;
-    }
-
-    .access-card h3 {
-        font-size: 18px;
-        margin: 0 0 15px 0;
-        padding: 8px 15px;
+    .feature-icon {
+        font-size: 40px !important;
     }
     
-    .access-card li {
-        font-size: 14px;
-        padding: 10px 15px;
-        margin-bottom: 8px;
-    }
-
-    /* 症状別案内（スマホ版） */
-    .symptoms-container {
-        margin: 20px;
-        gap: 20px;
+    /* リハビリテーション特徴（スマホ版） */
+    .rehab-characteristics {
+        margin: 30px 20px !important;
+        padding: 20px !important;
     }
     
-    .symptom-card {
-        padding: 20px;
-        border-radius: 16px;
-    }
-    
-    .symptom-header {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-        margin-bottom: 20px;
-    }
-    
-    .symptom-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 32px;
-        margin: 0 auto;
-    }
-    
-    .symptom-header h3 {
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    .symptom-quote {
-        padding: 15px 20px;
-        margin-bottom: 15px;
-        font-size: 14px;
-    }
-    
-    .symptom-quote::before,
-    .symptom-quote::after {
-        font-size: 30px;
-    }
-    
-    .symptom-content p {
+    .characteristics-content p {
         font-size: 14px !important;
         text-align: left !important;
         padding-left: 0 !important;
@@ -1610,100 +1542,66 @@ footer {
         margin-right: 0 !important;
     }
     
-    .consultation-notice {
-        margin: 30px 20px;
-        padding: 30px 20px;
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-    
-    .notice-icon {
-        font-size: 48px;
-    }
-    
-    .notice-content h3 {
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    .notice-content p {
-        font-size: 14px !important;
-        text-align: center !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-    
-    .consultation-button {
-        padding: 12px 25px;
-        font-size: 15px;
-    }
-
-    footer {
-        text-align: center !important;
-        padding: 10px;
-        width: 100% !important;
-        margin: 0 auto !important;
-    }
-
-    footer p {
-        text-align: center !important;
-        margin: 0 auto !important;
-        padding: 0 20px !important;
-    }
-
-    /* お問い合わせセクション（スマホ版） */
-    .contact-section {
-        margin: 2rem 20px !important;
-        padding: 2rem 15px !important;
-        text-align: center !important;
-        width: calc(100% - 40px) !important;
-        box-sizing: border-box !important;
-    }
-    
-    .contact-section h2 {
-        font-size: 1.5rem !important;
-        text-align: center !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .contact-section p {
-        font-size: 1rem !important;
-        text-align: center !important;
-        margin-bottom: 1.5rem !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-    }
-    
-    .contact-button {
-        display: block !important;
-        width: 80% !important;
-        max-width: 300px !important;
-        margin: 0 auto !important;
-        padding: 12px 20px !important;
-        font-size: 1rem !important;
-        text-align: center !important;
-    }
-
-    /* 優先診察のお知らせ（スマホ版） */
-    .priority-notice {
-        margin: 2rem 20px !important;
-        padding: 20px !important;
+    .reservation-notice {
+        margin: 20px 0 !important;
+        padding: 15px !important;
         flex-direction: column !important;
         text-align: center !important;
         gap: 10px !important;
     }
     
-    .priority-notice-icon {
-        font-size: 28px !important;
-        margin: 0 auto !important;
+    .reservation-notice p {
+        font-size: 14px !important;
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
     }
     
-    .priority-notice-content p {
-        font-size: 15px !important;
-        text-align: center !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
-        margin-bottom: 10px !important;
+    .special-therapy {
+        margin: 20px !important;
+        padding: 20px !important;
     }
-  }
+    
+    .special-therapy h3 {
+        font-size: 18px !important;
+        text-align: center !important;
+    }
+    
+    .therapy-content {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+    
+    .therapy-icon {
+        font-size: 36px !important;
+    }
+    
+    .therapy-details p {
+        font-size: 14px !important;
+        text-align: center !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .therapy-details .request-note {
+        padding: 12px !important;
+        font-size: 14px !important;
+        text-align: center !important;
+    }
+    
+    /* 機器説明詳細（スマホ版） */
+    .device-description {
+        padding: 15px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .device-description p {
+        font-size: 13px !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
