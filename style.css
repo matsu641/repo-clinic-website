@@ -489,6 +489,42 @@ table tr:last-child td {
     .visit-card p {
         font-size: 14px;
     }
+    
+    /* リハビリセクション直接コンテンツ（スマホ版） */
+    .rehab-facility h2 {
+        font-size: 20px !important;
+        text-align: center !important;
+        margin: 1.5rem 0 1rem 0 !important;
+        padding-left: 20px !important;
+    }
+    
+    .rehab-facility h2:after {
+        left: 50% !important;
+        width: 80% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .overview-content {
+        margin: 0 20px 1.5rem 20px !important;
+    }
+    
+    .overview-content p {
+        font-size: 14px !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+        margin-bottom: 15px !important;
+    }
+    
+    .characteristics-content {
+        margin: 0 20px 1.5rem 20px !important;
+    }
+    
+    .characteristics-content p {
+        font-size: 14px !important;
+        text-align: left !important;
+        padding-left: 0 !important;
+        margin-bottom: 15px !important;
+    }
 }
 
 /* より狭いスマホ画面用の追加スタイル */
@@ -1111,6 +1147,26 @@ table tr:last-child td {
     align-items: center;
 }
 
+.rehab-facility h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 2rem 0 1.5rem 0;
+    padding-left: 50px;
+    position: relative;
+}
+
+.rehab-facility h2:after {
+    content: '';
+    position: absolute;
+    left: 50px;
+    bottom: -8px;
+    width: calc(100% - 50px);
+    height: 4px;
+    background: linear-gradient(135deg, #66cdaa 0%, #5bb89a 100%);
+    border-radius: 2px;
+}
+
 .rehab-main-image {
     max-width: 80%;
 }
@@ -1208,6 +1264,7 @@ table tr:last-child td {
 
 .overview-content {
     line-height: 1.8;
+    margin: 0 50px 2rem 50px;
 }
 
 .overview-content p {
@@ -1295,6 +1352,7 @@ table tr:last-child td {
 
 .characteristics-content {
     line-height: 1.8;
+    margin: 0 50px 2rem 50px;
 }
 
 .characteristics-content p {
