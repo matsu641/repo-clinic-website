@@ -529,7 +529,7 @@ header .main-nav ul li.active {
 
 /* 診療科目・診療時間などのテキスト */
 .other {
-    padding-left: 50px;
+    padding: 0;
 }
 
 .other h2 {
@@ -557,8 +557,6 @@ table {
     max-width: 600px;
     border-collapse: collapse;
     margin: 2rem auto;
-    margin-left: 80px;
-    margin-right: 50px;
     text-align: center;
     background-color: #ffffff;
     border-radius: 15px;
@@ -623,8 +621,9 @@ table tr:last-child td {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin: 30px 0;
-    padding-right: 20px;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 30px;
 }
 
 /* 4番目と5番目のカードを下段に配置 - 上段と同じ幅に */
@@ -724,7 +723,8 @@ table tr:last-child td {
     .visit-cards-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
-        padding-right: 15px;
+        padding: 0 20px;
+        margin: 30px auto;
     }
     
     /* タブレットサイズでは2×2＋1の配置 */
@@ -901,7 +901,9 @@ table tr:last-child td {
     padding: 3rem 2rem;
     background: #ffffff;
     border-radius: 15px;
-    margin: 2rem 50px 2rem 0;
+    margin: 2rem auto;
+    max-width: 1200px;
+    width: calc(100% - 60px);
     box-shadow: 0 10px 30px rgba(102, 205, 170, 0.15);
 }
 
@@ -2216,11 +2218,17 @@ footer {
     .visit-cards-grid {
         grid-template-columns: 1fr !important;
         gap: 15px !important;
-        margin: 20px 10px !important;
+        margin: 20px auto !important;
+        max-width: 95% !important;
+        padding: 0 10px !important;
+        justify-items: center !important;
     }
     
     .visit-card {
         padding: 20px !important;
+        max-width: 320px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
     }
     
     .visit-card h3 {
@@ -2247,8 +2255,11 @@ footer {
     
     /* お問い合わせセクション */
     .contact-section {
-        margin: 30px 20px !important;
-        padding: 20px !important;
+        margin: 30px auto !important;
+        padding: 0px !important;
+        max-width: 95% !important;
+        width: auto !important;
+        text-align: center !important;
     }
     
     .contact-section h2 {
@@ -2493,6 +2504,11 @@ footer {
     .visit-card, .symptom-card {
         padding: 15px !important;
         margin-bottom: 15px !important;
+    }
+    
+    .visit-card {
+        max-width: 300px !important;
+        margin: 0 auto 15px auto !important;
     }
     
     .visit-card h3, .symptom-header h3 {
