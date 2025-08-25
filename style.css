@@ -502,20 +502,24 @@ table tr:last-child td {
         width: calc(100% + 20px) !important;
         transform: translateX(-50%) !important;
     }
-    
-    .overview-content {
-        margin: 0 20px 1.5rem 20px !important;
+      .overview-content {
+        margin: 0 auto 1.5rem auto !important;
+        padding: 0 20px !important;
+        max-width: none !important;
     }
     
     .overview-content p {
         font-size: 14px !important;
         text-align: left !important;
         padding-left: 0 !important;
-        margin-bottom: 15px !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
-    
-    .characteristics-content {
-        margin: 0 20px 1.5rem 20px !important;
+      .characteristics-content {
+        margin: 0 auto 1.5rem auto !important;
+        padding: 0 20px !important;
+        max-width: none !important;
     }
     
     .characteristics-content p {
@@ -1302,7 +1306,9 @@ table tr:last-child td {
 
 .overview-content {
     line-height: 1.8;
-    margin: 0 50px 4rem 50px;
+    margin: 0 auto 4rem auto;
+    max-width: 1200px;
+    padding: 0 50px;
 }
 
 .overview-content p {
@@ -1429,7 +1435,9 @@ table tr:last-child td {
 
 .characteristics-content {
     line-height: 1.8;
-    margin: 0 50px 4rem 50px;
+    margin: 0 auto 4rem auto;
+    max-width: 1200px;
+    padding: 0 50px;
 }
 
 .characteristics-content p {
