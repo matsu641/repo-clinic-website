@@ -898,7 +898,7 @@ table tr:last-child td {
 /* お問い合わせセクション */
 .contact-section {
     text-align: center;
-    padding: 3rem 2rem;
+    padding: 1.5rem 2rem 4rem 1.5rem;
     background: #ffffff;
     border-radius: 15px;
     margin: 2rem auto;
@@ -2229,7 +2229,7 @@ footer {
     /* 診療時間テーブル */
     .other table {
         font-size: 14px !important;
-        margin: 0 10px !important;
+        margin: 0 10px 0 30px !important;
     }
     
     .other th, .other td {
@@ -2278,7 +2278,7 @@ footer {
     /* お問い合わせセクション */
     .contact-section {
         margin: 30px auto !important;
-        padding: 0px !important;
+        padding: 15px 20px 40px 15px !important;
         max-width: 95% !important;
         width: auto !important;
         text-align: center !important;
