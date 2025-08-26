@@ -773,7 +773,7 @@ table tr:last-child td {
     font-size: 15px;
     line-height: 1.7;
     margin: 0;
-    text-align: center;
+    text-align: left;
     flex-grow: 1;
     display: flex;
     align-items: center;
