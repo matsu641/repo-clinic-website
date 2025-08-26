@@ -1105,6 +1105,7 @@ table tr:last-child td {
     font-size: 18px;
     margin-top: 10px;
     color: white;
+    white-space: nowrap;
 }
 
 .swiper-slide::before {
@@ -2207,6 +2208,7 @@ footer {
     
     .slide-caption p {
         font-size: 14px !important;
+        white-space: nowrap;
     }
     
     /* 診療科目・診療時間 */
@@ -2524,6 +2526,7 @@ footer {
     
     .slide-caption p {
         font-size: 12px !important;
+        white-space: nowrap;
     }
     
     /* カード系要素 */
