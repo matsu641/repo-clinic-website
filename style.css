@@ -1655,6 +1655,7 @@ table tr:last-child td {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    text-align: left;
 }
 
 /* 適応症状セクションを下部に固定 */
@@ -2037,6 +2038,7 @@ table tr:last-child td {
 }
 
 .access-section {
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
