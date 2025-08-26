@@ -345,8 +345,8 @@ header .main-nav ul li.active {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 85%;
-        max-width: 320px;
+        width: 50%; /* 85% → 70% に縮小 */
+        max-width: 200px; /* 320px → 280px に縮小 */
         height: 100vh;
         background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -374,7 +374,7 @@ header .main-nav ul li.active {
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 0;
-        padding: 18px 2.5rem;
+        padding: 16px 1.5rem; /* 18px 2.5rem → 16px 1.5rem に縮小 */
         font-size: 16px;
         text-align: left;
         white-space: normal;
@@ -391,7 +391,7 @@ header .main-nav ul li.active {
     header .main-nav ul li.active {
         background-color: rgba(255, 255, 255, 0.2);
         border-left: 4px solid white;
-        padding-left: calc(1rem - 4px);
+        padding-left: calc(1.5rem - 4px); /* 1rem → 1.5rem に調整 */
     }
     
     header .main-nav ul li:last-child {
@@ -451,17 +451,17 @@ header .main-nav ul li.active {
     }
     
     .main-nav {
-        width: 90%;
-        max-width: 280px;
+        width: 75%; /* 90% → 75% に縮小 */
+        max-width: 150px; /* 280px → 250px に縮小 */
     }
     
     header .main-nav ul li {
-        padding: 16px 0.8rem;
+        padding: 15px 1.2rem; /* 16px 0.8rem → 15px 1.2rem に調整 */
         font-size: 15px;
     }
     
     header .main-nav ul li.active {
-        padding-left: calc(0.8rem - 4px);
+        padding-left: calc(1.2rem - 4px); /* 0.8rem → 1.2rem に調整 */
     }
 }
 
@@ -2306,7 +2306,7 @@ footer {
     /* 診療時間テーブル */
     .other table {
         font-size: 14px !important;
-        margin: 0 10px 0 30px !important;
+        margin: 30px 30px 0 50px !important;
     }
     
     .other th, .other td {
