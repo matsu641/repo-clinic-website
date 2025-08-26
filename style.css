@@ -1274,8 +1274,11 @@ table tr:last-child td {
 .facility-gallery {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .facility1, .facility2 {
@@ -2414,13 +2417,21 @@ footer {
     
     /* 院内紹介 */
     .facility-gallery {
+        display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
         padding: 0 20px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        max-width: 100% !important;
     }
     
     .facility1, .facility2 {
-        width: 100% !important;
+        width: calc(100% - 40px) !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
     
     .facility1 h3, .facility2 h3 {
@@ -2618,6 +2629,20 @@ footer {
     
     .director-education {
         font-size: 13px !important;
+    }
+    
+    /* 院内紹介 - 小さいスマホでの追加調整 */
+    .facility-gallery {
+        padding: 0 15px !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .facility1, .facility2 {
+        width: calc(100% - 30px) !important;
+        max-width: 350px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
     }
     
     /* テーブル */
