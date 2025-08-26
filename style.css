@@ -1079,6 +1079,7 @@ table tr:last-child td {
     width: 100%;
     height: 80vh;
     object-fit: cover;
+    object-position: center;
     filter: brightness(0.7);
 }
 
@@ -2168,11 +2169,30 @@ footer {
    各セクションのレスポンシブ対応
    ========================= */
 
+/* タブレット向けスライダー調整 */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .swiper-container {
+        height: 60vh !important;
+    }
+    
+    .swiper-slide img {
+        height: 60vh !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+}
+
 /* ホームセクションのレスポンシブ対応 */
 @media (max-width: 768px) {
     /* スライドショー */
     .swiper-container {
         height: 250px !important;
+    }
+    
+    .swiper-slide img {
+        height: 250px !important;
+        object-fit: cover !important;
+        object-position: center !important;
     }
     
     .slide-caption {
@@ -2490,6 +2510,12 @@ footer {
     /* ホームセクション */
     .swiper-container {
         height: 200px !important;
+    }
+    
+    .swiper-slide img {
+        height: 200px !important;
+        object-fit: cover !important;
+        object-position: center !important;
     }
     
     .slide-caption h2 {
