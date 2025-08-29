@@ -393,16 +393,18 @@ header .main-nav ul li.active {
     }
     
     header .main-nav ul {
-        gap: 2px;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: flex-start;
         width: 100%;
     }
     
     header .main-nav ul li {
-        padding: 6px 3px;
+        padding: 6px 12px;
         font-size: 10px;
-        flex: 1;
-        min-width: 0;
+        flex: none;
+        min-width: auto;
+        width: 120px;
     }
 }
 
@@ -436,16 +438,18 @@ header .main-nav ul li.active {
     }
     
     header .main-nav ul {
-        gap: 1px;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3px;
+        justify-content: flex-start;
         width: 100%;
     }
     
     header .main-nav ul li {
-        padding: 5px 2px;
+        padding: 5px 10px;
         font-size: 9px;
-        flex: 1;
-        min-width: 0;
+        flex: none;
+        min-width: auto;
+        width: 120px;
     }
 }
 
@@ -479,16 +483,18 @@ header .main-nav ul li.active {
     }
     
     header .main-nav ul {
-        gap: 1px;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2px;
+        justify-content: flex-start;
         width: 100%;
     }
     
     header .main-nav ul li {
-        padding: 4px 2px;
+        padding: 4px 8px;
         font-size: 8px;
-        flex: 1;
-        min-width: 0;
+        flex: none;
+        min-width: auto;
+        width: 120px;
     }
 }
 
