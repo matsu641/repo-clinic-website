@@ -156,48 +156,45 @@ header {
     position: relative;
 }
 
-/* ハンバーガーメニューボタン（デスクトップでは非表示） */
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 1001;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+.logo-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
 }
 
-.mobile-menu-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.header-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.mobile-menu-toggle:focus {
-    outline: 2px solid rgba(255, 255, 255, 0.8);
-    outline-offset: 2px;
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hamburger-line {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
+.logo-text h1 {
+    margin: 0;
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 600;
+    color: white;
 }
 
-/* ハンバーガーメニューのアニメーション */
-.mobile-menu-toggle.active .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
+.logo-img {
+    height: clamp(60px, 8vw, 80px);
+    width: clamp(60px, 8vw, 80px);
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
 }
 
-.mobile-menu-toggle.active .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu-toggle.active .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 /* ナビゲーション */
@@ -246,21 +243,21 @@ header .main-nav ul li.active {
         padding: 1rem 1.5rem;
     }
     
-    .logo {
-        gap: 15px;
+    .logo-icon {
+        margin-right: 0.8rem;
     }
     
     .logo-text h1 {
-        font-size: clamp(18px, 4.5vw, 22px); /* タブレットでの動的サイズ調整 */
+        font-size: clamp(18px, 4.5vw, 22px);
     }
     
     .logo-img {
-        height: 70px;
-        width: 70px;
+        height: clamp(55px, 7vw, 70px);
+        width: clamp(55px, 7vw, 70px);
     }
     
     .tel {
-        font-size: clamp(13px, 3vw, 15px); /* タブレットでのTEL動的サイズ調整 */
+        font-size: clamp(12px, 2.5vw, 14px);
     }
     
     header .main-nav ul {
@@ -276,314 +273,213 @@ header .main-nav ul li.active {
 /* モバイル対応 */
 @media (max-width: 768px) {
     header {
-        padding: 1rem;
-        padding-right: 70px; /* ハンバーガーボタンのためのスペース確保 */
-        flex-wrap: nowrap;
-        align-items: center;
-        min-height: 80px;
-        position: relative;
+        padding: 0.5rem 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
     }
     
-    .logo {
-        flex: 1;
-        gap: 12px;
-        min-width: 0;
-        max-width: calc(100% - 70px); /* ハンバーガーボタンエリアを除外 */
+    .logo-icon {
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        z-index: 1001;
+        margin-right: 0;
+    }
+    
+    .header-content {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
     }
     
     .logo-text {
-        min-width: 0;
-        flex: 1;
-        max-width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
     }
     
     .logo-text h1 {
-        font-size: clamp(14px, 4vw, 18px); /* 動的サイズ調整：最小14px、最大18px */
-        margin: 0;
-        white-space: nowrap;
+        font-size: clamp(16px, 5vw, 20px);
         line-height: 1.2;
     }
     
     .logo-img {
-        height: 60px;
-        width: 60px;
-        flex-shrink: 0;
+        height: clamp(50px, 12vw, 60px);
+        width: clamp(50px, 12vw, 60px);
     }
     
     .tel {
-        font-size: clamp(12px, 3vw, 14px); /* TELも動的サイズ調整 */
+        font-size: clamp(11px, 2.5vw, 13px);
         margin-top: 2px;
-    }
-    
-    /* ハンバーガーメニューボタンを表示 */
-    .mobile-menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 1001;
-        background: rgba(102, 205, 170, 0.9);
-        border-radius: 8px;
-        backdrop-filter: blur(10px);
-        width: 48px;
-        height: 48px;
-    }
-    
-    .hamburger-line {
-        width: 24px !important;
-        height: 4px !important;
-        margin: 3px 0 !important;
-        border-radius: 2px !important;
-        transition: none !important;
     }
     
     /* モバイルナビゲーション */
     .main-nav {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 50%; /* 85% → 70% に縮小 */
-        max-width: 200px; /* 320px → 280px に縮小 */
-        height: 100vh;
-        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-        transition: right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        overflow-y: auto;
-        padding-top: 80px;
-    }
-    
-    .main-nav.active {
-        right: 0;
+        width: 100%;
+        position: static;
+        background: transparent;
+        box-shadow: none;
+        padding: 0;
+        overflow: visible;
+        margin-top: 0.5rem;
     }
     
     header .main-nav ul {
-        flex-direction: column;
-        gap: 0;
-        padding: 1rem 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 0;
         height: auto;
-        align-items: stretch;
+        align-items: center;
         margin: 0;
+        justify-content: center;
     }
     
     header .main-nav ul li {
-        background-color: transparent;
-        border: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0;
-        padding: 16px 1.5rem; /* 18px 2.5rem → 16px 1.5rem に縮小 */
-        font-size: 16px;
-        text-align: left;
-        white-space: normal;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 2px solid transparent;
+        border-radius: var(--border-radius-sm);
+        padding: 8px 12px;
+        font-size: 12px;
+        text-align: center;
+        white-space: nowrap;
         transition: all 0.3s ease;
         margin: 0;
+        color: var(--white);
+        flex: none;
     }
     
     header .main-nav ul li:hover {
-        background-color: rgba(255, 255, 255, 0.15);
-        transform: translateX(5px);
+        background-color: rgba(255, 255, 255, 0.2);
+        transform: translateY(-1px);
         border-color: rgba(255, 255, 255, 0.3);
     }
     
     header .main-nav ul li.active {
-        background-color: rgba(255, 255, 255, 0.2);
-        border-left: 4px solid white;
-        padding-left: calc(1.5rem - 4px); /* 1rem → 1.5rem に調整 */
-    }
-    
-    header .main-nav ul li:last-child {
-        border-bottom: none;
-    }
-    
-    /* モバイルメニューオーバーレイ */
-    .mobile-menu-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-    }
-    
-    .mobile-menu-overlay.active {
-        opacity: 1;
-        visibility: visible;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.5);
     }
 }
 
 /* 小さいスマホ対応 */
 @media (max-width: 480px) {
     header {
-        padding: 0.8rem;
-        padding-right: 60px; /* より小さなハンバーガーボタンのためのスペース */
+        padding: 0.5rem;
+        gap: 0.3rem;
     }
     
-    .logo {
-        gap: 10px;
-        max-width: calc(100% - 60px); /* ハンバーガーボタンエリアを除外 */
+    .logo-icon {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+    
+    .header-content {
+        gap: 0.3rem;
     }
     
     .logo-text h1 {
-        font-size: clamp(12px, 3.5vw, 16px); /* より小さい画面での動的サイズ調整 */
+        font-size: clamp(14px, 4.5vw, 18px);
     }
     
     .logo-img {
-        height: 50px;
-        width: 50px;
+        height: clamp(45px, 10vw, 50px);
+        width: clamp(45px, 10vw, 50px);
     }
     
     .tel {
-        font-size: clamp(11px, 2.5vw, 13px); /* 小さいスマホでのTEL動的調整 */
+        font-size: clamp(10px, 2vw, 12px);
     }
     
-    .mobile-menu-toggle {
-        top: 0.8rem;
-        right: 0.8rem;
-        width: 44px;
-        height: 44px;
-    }
-    
-    .main-nav {
-        width: 75%; /* 90% → 75% に縮小 */
-        max-width: 150px; /* 280px → 250px に縮小 */
+    header .main-nav ul {
+        gap: 0.3rem;
     }
     
     header .main-nav ul li {
-        padding: 15px 1.2rem; /* 16px 0.8rem → 15px 1.2rem に調整 */
-        font-size: 15px;
-    }
-    
-    header .main-nav ul li.active {
-        padding-left: calc(1.2rem - 4px); /* 0.8rem → 1.2rem に調整 */
+        padding: 6px 8px;
+        font-size: 11px;
     }
 }
 
 /* 極小スマホ対応 */
 @media (max-width: 360px) {
     header {
-        padding-right: 55px; /* さらに小さなハンバーガーボタンのためのスペース */
+        padding: 0.4rem;
+        gap: 0.2rem;
     }
     
-    .logo {
-        max-width: calc(100% - 55px); /* ハンバーガーボタンエリアを除外 */
+    .logo-icon {
+        top: 0.4rem;
+        left: 0.4rem;
+    }
+    
+    .header-content {
+        gap: 0.2rem;
     }
     
     .logo-text h1 {
-        font-size: clamp(11px, 3vw, 15px); /* 極小画面での動的サイズ調整 */
+        font-size: clamp(12px, 4vw, 16px);
+    }
+    
+    .logo-img {
+        height: clamp(40px, 9vw, 45px);
+        width: clamp(40px, 9vw, 45px);
     }
     
     .tel {
-        font-size: clamp(10px, 2.2vw, 12px); /* 極小画面でのTEL動的調整 */
+        font-size: clamp(9px, 2vw, 11px);
     }
     
-    .mobile-menu-toggle {
-        width: 42px;
-        height: 42px;
-        background: rgba(102, 205, 170, 0.9);
-    }
-    
-    .hamburger-line {
-        width: 20px !important;
-        height: 5px !important;
-        margin: 3px 0 !important;
-        border-radius: 3px !important;
-        transition: none !important;
-    }
-    
-    .main-nav {
-        width: 95%;
-        max-width: 260px;
+    header .main-nav ul {
+        gap: 0.2rem;
     }
     
     header .main-nav ul li {
-        padding: 15px 1rem;
-        font-size: 14px;
-    }
-    
-    header .main-nav ul li.active {
-        padding-left: calc(1rem - 4px);
+        padding: 5px 6px;
+        font-size: 10px;
     }
 }
 
 /* 超極小スマホ対応（320px以下） */
 @media (max-width: 320px) {
     header {
-        padding: 0.6rem;
-        padding-right: 50px; /* 最小のハンバーガーボタンのためのスペース */
+        padding: 0.3rem;
+        gap: 0.1rem;
     }
     
-    .logo {
-        gap: 8px;
-        max-width: calc(100% - 50px); /* ハンバーガーボタンエリアを除外 */
+    .logo-icon {
+        top: 0.3rem;
+        left: 0.3rem;
+    }
+    
+    .header-content {
+        gap: 0.1rem;
     }
     
     .logo-text h1 {
-        font-size: clamp(10px, 2.8vw, 14px); /* 超極小画面での動的サイズ調整 */
+        font-size: clamp(11px, 3.5vw, 15px);
     }
     
     .logo-img {
-        height: 45px;
-        width: 45px;
+        height: clamp(35px, 8vw, 40px);
+        width: clamp(35px, 8vw, 40px);
     }
     
     .tel {
-        font-size: clamp(9px, 2vw, 11px); /* 超極小画面でのTEL動的調整 */
+        font-size: clamp(8px, 1.8vw, 10px);
     }
     
-    .mobile-menu-toggle {
-        width: 38px;
-        height: 38px;
-        top: 0.6rem;
-        right: 0.6rem;
+    header .main-nav ul {
+        gap: 0.1rem;
     }
     
-    .hamburger-line {
-        width: 18px !important;
-        height: 3px !important;
+    header .main-nav ul li {
+        padding: 4px 5px;
+        font-size: 9px;
     }
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-  
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-  
-.logo-text h1 {
-    margin: 0;
-    font-size: clamp(18px, 5vw, 24px); /* デスクトップでも動的サイズ調整 */
-    font-weight: 600;
-    color: white;
-}
-
-.logo-img {
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-    transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-    transform: scale(1.05);
 }
 
 .tel {
-    font-size: clamp(14px, 3.5vw, 16px); /* TELの基本動的サイズ調整 */
+    font-size: clamp(12px, 2.5vw, 14px);
     font-weight: bold;
     margin-top: 4px;
     color: white;

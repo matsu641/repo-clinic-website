@@ -1,74 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // モバイルメニューの制御
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const mainNav = document.querySelector('.main-nav');
-    const body = document.body;
-    
-    // モバイルメニューオーバーレイの作成
-    const overlay = document.createElement('div');
-    overlay.className = 'mobile-menu-overlay';
-    body.appendChild(overlay);
-    
-    // ハンバーガーメニューのトグル
-    function toggleMobileMenu() {
-        const isActive = mobileMenuToggle.classList.contains('active');
-        
-        if (isActive) {
-            closeMobileMenu();
-        } else {
-            openMobileMenu();
-        }
-    }
-    
-    function openMobileMenu() {
-        mobileMenuToggle.classList.add('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'true');
-        mobileMenuToggle.setAttribute('aria-label', 'メニューを閉じる');
-        mainNav.classList.add('active');
-        overlay.classList.add('active');
-        body.style.overflow = 'hidden';
-    }
-    
-    function closeMobileMenu() {
-        mobileMenuToggle.classList.remove('active');
-        mobileMenuToggle.setAttribute('aria-expanded', 'false');
-        mobileMenuToggle.setAttribute('aria-label', 'メニューを開く');
-        mainNav.classList.remove('active');
-        overlay.classList.remove('active');
-        body.style.overflow = '';
-    }
-    
-    // イベントリスナー
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    
-    // オーバーレイクリックで閉じる
-    overlay.addEventListener('click', closeMobileMenu);
-    
-    // ESCキーで閉じる
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mainNav.classList.contains('active')) {
-            closeMobileMenu();
-        }
-    });
-    
-    // ウィンドウリサイズ時の処理
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            closeMobileMenu();
-        }
-    });
-
     // タブ切り替え
     const tabs = document.querySelectorAll(".tab");
     const contents = document.querySelectorAll(".tab-content");
 
     tabs.forEach(tab => {
         tab.addEventListener("click", () => {
-            // モバイルメニューを閉じる
-            if (window.innerWidth <= 768) {
-                closeMobileMenu();
-            }
-            
             // すべてのタブから active クラスを外す
             tabs.forEach(t => {
                 t.classList.remove("active");
